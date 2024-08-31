@@ -23,7 +23,7 @@ const cards = ref(cardsData.cards)
                   <div class="flex-start flex flex-col items-center py-2">
                     <div class="mb-4 overflow-hidden rounded h-24 w-24">
                       <figure class="aspect-square relative h-full overflow-hidden w-full">
-                        <TechIcon></TechIcon>
+                        <TechIcon size="h-24 w-24" />
                       </figure>
                     </div>
                     <div class="space-y-4">
@@ -96,7 +96,15 @@ const cards = ref(cardsData.cards)
                     >
                   </div>
                   <!-- social -->
-                  <SocialComponent></SocialComponent>
+                  <div class="space-y-2 flex flex-col">
+                    <p
+                      class="whitespace-nowrap text-xs font-semibold text-md font-regular font-helvetica"
+                    >
+                      Connect
+                    </p>
+                    <!-- social component -->
+                    <SocialComponent></SocialComponent>
+                  </div>
                 </div>
               </div>
             </div>
@@ -141,7 +149,7 @@ const cards = ref(cardsData.cards)
                         </div>
                         <input
                           id="q"
-                          class="rounded-lg bg-slate-100 border focus:outline-none p-2 border-slate-100 w-full max-w-none pl-8 sm:max-w-4xl"
+                          class="rounded-lg bg-slate-100 border focus:outline-none p-2 border-slate-100 w-full max-w-none pl-8"
                           placeholder="Search posts..."
                           type="text"
                           value=""
@@ -197,6 +205,11 @@ const cards = ref(cardsData.cards)
                         class="rounded-lg flex bg-slate-200 items-center gap-2 border border-transparent px-3 py-1 transition duration-150 ease-in-out hover:bg-primary"
                         href="/archive?page=1"
                         >1
+                      </a>
+                      <a
+                        class="rounded-lg flex bg-slate-200 items-center gap-2 border border-transparent px-3 py-1 transition duration-150 ease-in-out hover:bg-primary"
+                        href="/archive?page=2"
+                        >2
                       </a>
                     </div>
 
