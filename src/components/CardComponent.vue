@@ -13,11 +13,10 @@ defineProps<{
 
 <template>
   <div class="transparent h-full cursor-pointer overflow-hidden rounded-2xl flex flex-col border">
-    <!-- article image -->
     <div class="relative w-full article-image">
       <a class="" :href="card.link">
         <div class="w-full">
-          <figure class="relative aspect-social h-full overflow-hidden w-full">
+          <figure class="relative h-full aspect-social overflow-hidden w-full">
             <img
               width="800"
               height="421"

@@ -1,8 +1,12 @@
+<script setup lang="ts">
+defineProps<{
+  size: string
+}>()
+</script>
 <template>
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    width="100px"
-    height="100px"
+    :class="size"
     viewBox="0 0 14 14"
     role="img"
     focusable="false"

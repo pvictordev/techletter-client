@@ -8,12 +8,12 @@ import DevtoIcon from './icons/social/DevtoIcon.vue'
 import TwitterIcon from './icons/social/TwitterIcon.vue'
 </script>
 <template>
-  <div class="space-y-2 column">
+  <div class="space-y-2 flex flex-col">
     <p class="whitespace-nowrap text-xs font-semibold text-md font-regular font-helvetica">
       Connect
     </p>
 
-    <div class="flex">
+    <div class="flex flex-wrap">
       <SocialItem>
         <template #icon>
           <div
