@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import TechIcon from '@/components/icons/TechIcon.vue'
-import CardComponent from '@/components/CardComponent.vue'
+import CardComponent from '@/components/PostComponent.vue'
 import SocialComponent from '@/components/SocialComponent.vue'
 
 import cardsData from '@/assets/data.json'
