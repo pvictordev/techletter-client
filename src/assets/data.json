@@ -1,0 +1,20 @@
+{
+  "cards": [
+    {
+      "id": 1,
+      "title": "Pavel Durov was arested in France",
+      "image": "https://informantonline.com.ng/wp-content/uploads/2024/08/Pavel-Durov.jpg",
+      "link": "/pavel-durov",
+      "author": "Victor Purice",
+      "date": "Aug 30, 2024"
+    },
+    {
+      "id": 2,
+      "title": "Open AI in a new scandal",
+      "image": "https://winbuzzer.com/wp-content/uploads/2023/02/openai-logo.png",
+      "link": "/open-ai",
+      "author": "Alexandru Maereanu",
+      "date": "Aug 30, 2024"
+    }
+  ]
+}
