@@ -13,7 +13,7 @@ const authors = ref(authorsData.authors)
       <div class="px-4">
         <div class="mx-auto mt-8 max-w-6xl py-4">
           <ul class="flex flex-wrap items-center gap-2 text-xs font-semibold">
-            <li class="flex items-center gap-2 text-wt-text-on-background">
+            <li class="flex items-center gap-2">
               <a href="../" class="opacity-70">Tech Letter</a
               ><svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -32,7 +32,7 @@ const authors = ref(authorsData.authors)
                 ></path>
               </svg>
             </li>
-            <li class="flex items-center gap-2 text-wt-text-on-background">
+            <li class="flex items-center gap-2">
               <span class="!opacity-100">Authors</span>
             </li>
           </ul>
@@ -40,14 +40,8 @@ const authors = ref(authorsData.authors)
         <div class="mx-auto flex w-full max-w-6xl pb-16 pt-4">
           <div class="flex w-full flex-col space-y-8">
             <div class="w-full space-y-2">
-              <h1
-                class="font-semibold text-wt-text-on-background wt-header-font text-gray-700 text-4xl font-regular"
-              >
-                Authors
-              </h1>
-              <p
-                class="text-wt-text-on-background wt-body-font text-gray-700 text-lg sm:text-xl font-regular"
-              >
+              <h1 class="font-semibold wt-header-font text-4xl font-regular">Authors</h1>
+              <p class="wt-body-font text-lg sm:text-xl font-regular">
                 Meet the writers contributing to Tech Letter
               </p>
             </div>
