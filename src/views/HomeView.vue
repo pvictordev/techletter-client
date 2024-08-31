@@ -96,7 +96,15 @@ const cards = ref(cardsData.cards)
                     >
                   </div>
                   <!-- social -->
-                  <SocialComponent></SocialComponent>
+                  <div class="space-y-2 flex flex-col">
+                    <p
+                      class="whitespace-nowrap text-xs font-semibold text-md font-regular font-helvetica"
+                    >
+                      Connect
+                    </p>
+                    <!-- social component -->
+                    <SocialComponent></SocialComponent>
+                  </div>
                 </div>
               </div>
             </div>
