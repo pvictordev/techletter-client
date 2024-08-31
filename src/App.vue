@@ -83,3 +83,6 @@ nav a:first-of-type {
   }
 }
 </style> -->
+<template>
+  <div class="text-red-500">content</div>
+</template>
