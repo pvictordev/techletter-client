@@ -13,7 +13,7 @@
       "title": "Open AI in a new scandal",
       "image": "https://winbuzzer.com/wp-content/uploads/2023/02/openai-logo.png",
       "link": "/open-ai",
-      "author": "Alexandru Maereanu",
+      "author": "István Domokos",
       "date": "Aug 30, 2024"
     },
     {
@@ -23,6 +23,23 @@
       "link": "/open-ai",
       "author": "Alexandru Maereanu",
       "date": "Aug 30, 2024"
+    }
+  ],
+  "authors": [
+    {
+      "id": 1,
+      "name": "Victor Purice",
+      "profile": "https://upload.wikimedia.org/wikipedia/commons/0/06/Ryan_Gosling_-_Cannes_Film_Festival_-_02.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Alexandru Maereanu",
+      "profile": "https://informantonline.com.ng/wp-content/uploads/2024/08/Pavel-Durov.jpg"
+    },
+    {
+      "id": 3,
+      "name": "István Domokos",
+      "profile": "https://informantonline.com.ng/wp-content/uploads/2024/08/Pavel-Durov.jpg"
     }
   ]
 }

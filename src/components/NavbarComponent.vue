@@ -31,6 +31,15 @@ import TechIcon from './icons/TechIcon.vue'
           </div>
         </div>
         <div class="flex items-center space-x-2">
+          <div class="block">
+            <div class="z-20 flex gap-1">
+              <a class="transition:all rounded-wt px-2 py-2 hover:bg-black/5" href="/authors"
+                ><span class="whitespace-nowrap text-xs sm:block text-md font-regular font-ariel"
+                  >Authors</span
+                ></a
+              >
+            </div>
+          </div>
           <div class="flex items-center space-x-2">
             <button class="border inline-flex items-center py-2 px-4 rounded-md">Login</button
             ><a
