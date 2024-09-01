@@ -22,7 +22,7 @@ onMounted(() => {
     <div class="mx-auto w-full max-w-6xl">
       <div class="mx-auto flex items-center justify-between">
         <div class="flex items-center space-x-2">
-          <a class="rounded-lg transition:all px-2 py-1 hover:bg-black/5" href="/"
+          <a class="transition:all px-2 py-1 rounded-md hover:bg-black/10" href="/"
             ><div class="flex items-center space-x-2">
               <div class="h-8 w-8 overflow-hidden rounded-wt">
                 <figure class="aspect-square relative h-full overflow-hidden w-full">
@@ -37,7 +37,9 @@ onMounted(() => {
           >
           <div class="block">
             <div class="z-20 flex gap-1">
-              <a class="transition:all rounded-wt px-2 py-2 hover:bg-black/5" href="/c/advertise"
+              <a
+                class="transition:all rounded-wt px-2 py-2 rounded-md hover:bg-black/10"
+                href="/c/advertise"
                 ><span class="whitespace-nowrap text-xs sm:block text-md font-regular font-ariel"
                   >Advertise</span
                 ></a
@@ -48,7 +50,7 @@ onMounted(() => {
         <div class="flex items-center space-x-2">
           <div @click="themeStore.toggleDarkMode" class="block">
             <div class="z-20 flex gap-1 cursor-pointer">
-              <p class="transition:all rounded-md px-2 py-2 hover:bg-black/5">
+              <p class="transition:all px-2 py-2 rounded-md hover:bg-black/10">
                 <span class="whitespace-nowrap text-xs sm:block text-md font-regular font-ariel">
                   <!-- conditional rendering -->
                   <DarkMode v-if="isDarkMode" />
@@ -59,7 +61,7 @@ onMounted(() => {
           </div>
           <div class="block">
             <div class="z-20 flex gap-1">
-              <a class="transition:all rounded-wt px-2 py-2 hover:bg-black/5" href="/authors"
+              <a class="transition:all px-2 py-2 rounded-md hover:bg-black/10" href="/authors"
                 ><span class="whitespace-nowrap text-xs sm:block text-md font-regular font-ariel"
                   >Authors</span
                 ></a
