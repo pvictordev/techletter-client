@@ -2,7 +2,7 @@
 import TechIcon from './icons/TechIcon.vue'
 import BurgerIcon from './icons/BurgerIcon.vue'
 
-import { computed, onMounted, ref } from 'vue'
+import { computed, onMounted, onUnmounted, ref } from 'vue'
 import { useThemeStore } from '@/stores/theme'
 
 // toggle dark mode
@@ -16,9 +16,22 @@ onMounted(() => {
 const isMenuVisible = ref(false)
 
 const toggleMenu = () => {
-  console.log(isMenuVisible.value)
   isMenuVisible.value = !isMenuVisible.value
 }
+
+const handleClickOutside = (event: MouseEvent) => {
+  const menuElement = document.getElementById('headlessui-menu-button-:Rd5al:')
+  if (menuElement && !menuElement.contains(event.target as Node)) {
+    isMenuVisible.value = false
+  }
+}
+onMounted(() => {
+  document.addEventListener('click', handleClickOutside)
+})
+
+onUnmounted(() => {
+  document.removeEventListener('click', handleClickOutside)
+})
 </script>
 
 <template>
@@ -84,11 +97,11 @@ const toggleMenu = () => {
                       @click="themeStore.toggleDarkMode"
                       class="hover:bg-black/20 rounded-md p-1 flex items-center"
                     >
-                      <span v-if="isDarkMode" class="dark-mode">
+                      <span v-if="isDarkMode" class="dark-mode flex items-center gap-2">
                         <i class="pi pi-moon"></i>
                         Dark
                       </span>
-                      <span v-else class="light-mode">
+                      <span v-else class="light-mode flex items-center gap-2">
                         <i class="pi pi-sun"></i>
                         Light
                       </span>
