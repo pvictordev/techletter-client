@@ -3,6 +3,7 @@ import TechIcon from '@/components/icons/TechIcon.vue'
 import SocialComponent from '@/components/SocialComponent.vue'
 import SearchComponent from '@/components/SearchComponent.vue'
 // import PaginationComponent from '@/components/PaginationComponent.vue'
+import FormComponent from '@/components/FormComponent.vue'
 </script>
 
 <template>
@@ -40,36 +41,7 @@ import SearchComponent from '@/components/SearchComponent.vue'
 
                   <div class="mx-auto mt-4 max-w-sm sm:max-w-lg">
                     <div class="flex w-full flex-col items-center">
-                      <form
-                        method="post"
-                        action="/create"
-                        class="group w-full rounded-wt bg-transparent"
-                      >
-                        <div class="flex flex-col">
-                          <!-- input box -->
-                          <div
-                            class="flex w-full flex-col items-center border border-primary sm:flex-row overflow-hidden rounded-lg bg-gray-50"
-                          >
-                            <!-- input field -->
-                            <div class="flex w-full items-center">
-                              <input
-                                autocomplete="email"
-                                class="text-black p-2 focus:outline-none z-10 w-full bg-transparent placeholder-shown:text-ellipsis text-lg focus:text-lg active:text-lg sm:text-lg"
-                                placeholder="Enter your email"
-                                type="email"
-                                name="email"
-                              />
-                            </div>
-
-                            <!-- input button -->
-                            <input
-                              class="cursor-pointer bg-primary text-white px-5 py-3 font-semibold w-full sm:w-auto text-lg focus:text-lg active:text-lg sm:text-lg rounded-lg sm:rounded-lg-r"
-                              type="submit"
-                              value="Subscribe"
-                            />
-                          </div>
-                        </div>
-                      </form>
+                      <FormComponent />
                     </div>
                   </div>
                 </div>
