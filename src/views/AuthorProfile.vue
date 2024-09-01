@@ -33,7 +33,7 @@ const cards = ref(cardsData.cards)
               </svg>
             </li>
             <li class="flex items-center gap-2 text-wt-text-on-background">
-              <a href="./" class="opacity-70">Authors</a
+              <router-link to="/authors" class="opacity-70">Authors</router-link
               ><svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
