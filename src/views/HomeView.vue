@@ -10,7 +10,7 @@ const cards = ref(cardsData.cards)
 </script>
 
 <template>
-  <div class="flex min-h-screen flex-col">
+  <div class="flex min-h-screen flex-col dark:bg-emerald-950 dark:text-white">
     <main class="flex-grow">
       <div class="min-h-screen overflow-x-hidden">
         <!-- top part -->
@@ -58,7 +58,7 @@ const cards = ref(cardsData.cards)
                             <div class="flex w-full items-center">
                               <input
                                 autocomplete="email"
-                                class="wt-button-font p-2 focus:outline-none z-10 w-full bg-transparent placeholder-shown:text-ellipsis text-lg focus:text-lg active:text-lg sm:text-lg"
+                                class="text-black p-2 focus:outline-none z-10 w-full bg-transparent placeholder-shown:text-ellipsis text-lg focus:text-lg active:text-lg sm:text-lg"
                                 placeholder="Enter your email"
                                 type="email"
                                 name="email"
@@ -67,7 +67,7 @@ const cards = ref(cardsData.cards)
 
                             <!-- input button -->
                             <input
-                              class="cursor-pointer bg-primary text-white px-5 py-3 font-semibold w-full sm:w-auto text-lg focus:text-lg active:text-lg sm:text-lg rounded-lg rounded-none sm:rounded-lg-r"
+                              class="cursor-pointer bg-primary text-white px-5 py-3 font-semibold w-full sm:w-auto text-lg focus:text-lg active:text-lg sm:text-lg rounded-lg sm:rounded-lg-r"
                               type="submit"
                               value="Subscribe"
                             />
@@ -149,7 +149,7 @@ const cards = ref(cardsData.cards)
                         </div>
                         <input
                           id="q"
-                          class="rounded-lg bg-slate-100 border focus:outline-none p-2 border-slate-100 w-full max-w-none pl-8"
+                          class="rounded-lg bg-slate-100 dark:bg-emerald-950 border focus:outline-none p-2 border-slate-100 w-full max-w-none pl-8"
                           placeholder="Search posts..."
                           type="text"
                           value=""
@@ -170,16 +170,18 @@ const cards = ref(cardsData.cards)
                     class="col-span-12 mx-auto mt-12 grid grid-cols-4 grid-rows-2 items-center gap-3 px-4 py-4 pb-8 sm:flex sm:justify-center"
                   >
                     <!-- first & back -->
-                    <div class="wt-button-font order-2 col-span-2 flex justify-end gap-2">
+                    <div class="order-2 col-span-2 flex justify-end gap-2">
                       <a
-                        class="rounded-lg flex bg-slate-200 items-center gap-2 border border-transparent px-3 py-1 transition duration-150 ease-in-out hover:bg-primary"
+                        class="rounded-lg flex bg-slate-200 dark:bg-emerald-800 items-center gap-2 border border-transparent px-3 py-1 transition duration-150 ease-in-out hover:bg-primary"
                         href="/archive?page=1"
                         >First
                       </a>
+
                       <a
-                        class="rounded-lg flex bg-slate-200 items-center gap-2 border border-transparent px-3 py-1 transition duration-150 ease-in-out hover:bg-primary"
+                        class="rounded-lg flex bg-slate-200 dark:bg-emerald-800 items-center gap-2 border border-transparent px-3 py-1 transition duration-150 ease-in-out hover:bg-primary"
                         href="/archive?page=0"
-                        ><svg
+                      >
+                        <svg
                           xmlns="http://www.w3.org/2000/svg"
                           fill="none"
                           viewBox="0 0 24 24"
@@ -194,20 +196,21 @@ const cards = ref(cardsData.cards)
                             stroke-linecap="round"
                             stroke-linejoin="round"
                             d="m8.25 4.5 7.5 7.5-7.5 7.5"
-                          ></path></svg
-                        >Back</a
-                      >
+                          ></path>
+                        </svg>
+                        Back
+                      </a>
                     </div>
 
                     <!-- page numbers -->
                     <div class="order-1 col-span-4 flex justify-center gap-3 sm:order-2">
                       <a
-                        class="rounded-lg flex bg-slate-200 items-center gap-2 border border-transparent px-3 py-1 transition duration-150 ease-in-out hover:bg-primary"
+                        class="rounded-lg flex bg-slate-200 dark:bg-emerald-800 items-center gap-2 border border-transparent px-3 py-1 transition duration-150 ease-in-out hover:bg-primary"
                         href="/archive?page=1"
                         >1
                       </a>
                       <a
-                        class="rounded-lg flex bg-slate-200 items-center gap-2 border border-transparent px-3 py-1 transition duration-150 ease-in-out hover:bg-primary"
+                        class="rounded-lg flex bg-slate-200 dark:bg-emerald-800 items-center gap-2 border border-transparent px-3 py-1 transition duration-150 ease-in-out hover:bg-primary"
                         href="/archive?page=2"
                         >2
                       </a>
@@ -216,7 +219,7 @@ const cards = ref(cardsData.cards)
                     <!-- last & next -->
                     <div class="wt-button-font order-2 col-span-2 flex items-center gap-2">
                       <a
-                        class="rounded-lg flex bg-slate-200 items-center gap-2 border border-transparent px-3 py-1 transition duration-150 ease-in-out hover:bg-primary"
+                        class="rounded-lg flex bg-slate-200 dark:bg-emerald-800 items-center gap-2 border border-transparent px-3 py-1 transition duration-150 ease-in-out hover:bg-primary"
                         href="/archive?page=2"
                       >
                         Next
@@ -238,7 +241,7 @@ const cards = ref(cardsData.cards)
                         </svg>
                       </a>
                       <a
-                        class="rounded-lg flex bg-slate-200 items-center gap-2 border border-transparent px-3 py-1 transition duration-150 ease-in-out hover:bg-primary"
+                        class="rounded-lg flex bg-slate-200 dark:bg-emerald-800 items-center gap-2 border border-transparent px-3 py-1 transition duration-150 ease-in-out hover:bg-primary"
                         href="/archive?page=13"
                       >
                         Last

@@ -9,7 +9,7 @@ defineProps<{
 </script>
 
 <template>
-  <div class="transparent h-full cursor-pointer overflow-hidden rounded-2xl flex flex-col">
+  <div class="transparent h-full cursor-pointer border overflow-hidden rounded-2xl flex flex-col">
     <div class="relative w-full article-image">
       <a class="" href="">
         <div class="w-full">
@@ -26,6 +26,6 @@ defineProps<{
       </a>
     </div>
 
-    <h2 class="p-3 pl-0 text-xl font-medium">{{ author.name }}</h2>
+    <h2 class="p-3 text-xl font-medium">{{ author.name }}</h2>
   </div>
 </template>

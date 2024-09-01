@@ -1,13 +1,28 @@
 <script setup lang="ts">
 import TechIcon from './icons/TechIcon.vue'
+import LightMode from './icons/LightMode.vue'
+import DarkMode from './icons/DarkMode.vue'
+
+import { computed, onMounted } from 'vue'
+import { useThemeStore } from '@/stores/theme'
+
+const isDarkMode = computed(() => themeStore.isDarkMode)
+
+const themeStore = useThemeStore()
+
+onMounted(() => {
+  themeStore.initTheme()
+})
 </script>
 
 <template>
-  <nav class="px-4 sm:px-6 w-full py-2">
+  <nav
+    class="px-4 sm:px-6 w-full transform transition-transform duration-500 ease-in-out py-2 dark:bg-emerald-950 dark:text-white"
+  >
     <div class="mx-auto w-full max-w-6xl">
       <div class="mx-auto flex items-center justify-between">
         <div class="flex items-center space-x-2">
-          <a class="rounded-lg transition:all px-2 py-1 hover:bg-black/5" href="/"
+          <a class="transition:all px-2 py-1 rounded-md hover:bg-black/10" href="/"
             ><div class="flex items-center space-x-2">
               <div class="h-8 w-8 overflow-hidden rounded-wt">
                 <figure class="aspect-square relative h-full overflow-hidden w-full">
@@ -22,7 +37,9 @@ import TechIcon from './icons/TechIcon.vue'
           >
           <div class="block">
             <div class="z-20 flex gap-1">
-              <a class="transition:all rounded-wt px-2 py-2 hover:bg-black/5" href="/c/advertise"
+              <a
+                class="transition:all rounded-wt px-2 py-2 rounded-md hover:bg-black/10"
+                href="/c/advertise"
                 ><span class="whitespace-nowrap text-xs sm:block text-md font-regular font-ariel"
                   >Advertise</span
                 ></a
@@ -31,9 +48,20 @@ import TechIcon from './icons/TechIcon.vue'
           </div>
         </div>
         <div class="flex items-center space-x-2">
+          <div @click="themeStore.toggleDarkMode" class="block">
+            <div class="z-20 flex gap-1 cursor-pointer">
+              <p class="transition:all px-2 py-2 rounded-md hover:bg-black/10">
+                <span class="whitespace-nowrap text-xs sm:block text-md font-regular font-ariel">
+                  <!-- conditional rendering -->
+                  <DarkMode v-if="isDarkMode" />
+                  <LightMode v-else />
+                </span>
+              </p>
+            </div>
+          </div>
           <div class="block">
             <div class="z-20 flex gap-1">
-              <a class="transition:all rounded-wt px-2 py-2 hover:bg-black/5" href="/authors"
+              <a class="transition:all px-2 py-2 rounded-md hover:bg-black/10" href="/authors"
                 ><span class="whitespace-nowrap text-xs sm:block text-md font-regular font-ariel"
                   >Authors</span
                 ></a
