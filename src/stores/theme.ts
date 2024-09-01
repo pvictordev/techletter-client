@@ -8,6 +8,7 @@ export const useThemeStore = defineStore('theme', {
     toggleDarkMode() {
       this.isDarkMode = !this.isDarkMode
       this.applyTheme()
+      this.saveThemePreference()
     },
     applyTheme() {
       if (this.isDarkMode) {
@@ -17,14 +18,23 @@ export const useThemeStore = defineStore('theme', {
       }
     },
     initTheme() {
-      const darkModeMediaQuery = window.matchMedia('(prefers-color-scheme: dark)')
-      this.isDarkMode = darkModeMediaQuery.matches
-      this.applyTheme()
+      const savedTheme = localStorage.getItem('isDarkMode')
 
-      darkModeMediaQuery.addEventListener('change', (e) => {
-        this.isDarkMode = e.matches
-        this.applyTheme()
-      })
+      if (savedTheme !== null) {
+        this.isDarkMode = JSON.parse(savedTheme)
+      } else {
+        const darkModeMediaQuery = window.matchMedia('(prefers-color-scheme: dark)')
+        this.isDarkMode = darkModeMediaQuery.matches
+        darkModeMediaQuery.addEventListener('change', (e) => {
+          this.isDarkMode = e.matches
+          this.applyTheme()
+          this.saveThemePreference()
+        })
+      }
+      this.applyTheme()
+    },
+    saveThemePreference() {
+      localStorage.setItem('isDarkMode', JSON.stringify(this.isDarkMode))
     }
   }
 })

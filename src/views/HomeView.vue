@@ -1,12 +1,8 @@
 <script setup lang="ts">
 import TechIcon from '@/components/icons/TechIcon.vue'
-import CardComponent from '@/components/PostComponent.vue'
 import SocialComponent from '@/components/SocialComponent.vue'
-
-import cardsData from '@/assets/data.json'
-import { ref } from 'vue'
-
-const cards = ref(cardsData.cards)
+import SearchComponent from '@/components/SearchComponent.vue'
+// import PaginationComponent from '@/components/PaginationComponent.vue'
 </script>
 
 <template>
@@ -14,8 +10,8 @@ const cards = ref(cardsData.cards)
     <main class="flex-grow">
       <div class="min-h-screen overflow-x-hidden">
         <!-- top part -->
-        <div class="relative py-8">
-          <div class="relative left-0 top-0 h-full w-full">
+        <div class="py-12">
+          <div class="left-0 top-0 h-full w-full">
             <div class="px-4 sm:px-6">
               <div class="mx-auto w-full max-w-6xl">
                 <!-- subscribe -->
@@ -125,129 +121,8 @@ const cards = ref(cardsData.cards)
             <div class="grid w-full grid-cols-12">
               <div class="order-last col-span-12 pb-4 pt-2 lg:order-first mb-8">
                 <div>
-                  <!-- search -->
-                  <div class="mb-8">
-                    <div class="relative w-full pb-4">
-                      <div class="group relative w-full transition-all">
-                        <div class="absolute left-2 top-1/2 -translate-y-1/2 transform">
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            fill="none"
-                            viewBox="0 0 24 24"
-                            stroke-width="1.5"
-                            stroke="currentColor"
-                            aria-hidden="true"
-                            data-slot="icon"
-                            class="h-4 w-4"
-                          >
-                            <path
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                              d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z"
-                            ></path>
-                          </svg>
-                        </div>
-                        <input
-                          id="q"
-                          class="rounded-lg bg-slate-100 dark:bg-emerald-950 border focus:outline-none p-2 border-slate-100 w-full max-w-none pl-8"
-                          placeholder="Search posts..."
-                          type="text"
-                          value=""
-                          name=""
-                        />
-                      </div>
-                    </div>
-                    <div class="mb-2 flex flex-wrap gap-2"></div>
-                  </div>
-
-                  <!-- cards grid -->
-                  <div class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
-                    <CardComponent v-for="card in cards" :key="card.id" :card="card" />
-                  </div>
-
-                  <!-- pagination -->
-                  <div
-                    class="col-span-12 mx-auto mt-12 grid grid-cols-4 grid-rows-2 items-center gap-3 px-4 py-4 pb-8 sm:flex sm:justify-center"
-                  >
-                    <!-- first & back -->
-                    <div class="order-2 col-span-2 flex justify-end gap-2">
-                      <a
-                        class="rounded-lg flex bg-slate-200 dark:bg-emerald-800 items-center gap-2 border border-transparent px-3 py-1 transition duration-150 ease-in-out hover:bg-primary"
-                        href="/archive?page=1"
-                        >First
-                      </a>
-
-                      <a
-                        class="rounded-lg flex bg-slate-200 dark:bg-emerald-800 items-center gap-2 border border-transparent px-3 py-1 transition duration-150 ease-in-out hover:bg-primary"
-                        href="/archive?page=0"
-                      >
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          fill="none"
-                          viewBox="0 0 24 24"
-                          stroke-width="1.5"
-                          stroke="currentColor"
-                          aria-hidden="true"
-                          data-slot="icon"
-                          class="rotate-180 transform"
-                          height="16px"
-                        >
-                          <path
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            d="m8.25 4.5 7.5 7.5-7.5 7.5"
-                          ></path>
-                        </svg>
-                        Back
-                      </a>
-                    </div>
-
-                    <!-- page numbers -->
-                    <div class="order-1 col-span-4 flex justify-center gap-3 sm:order-2">
-                      <a
-                        class="rounded-lg flex bg-slate-200 dark:bg-emerald-800 items-center gap-2 border border-transparent px-3 py-1 transition duration-150 ease-in-out hover:bg-primary"
-                        href="/archive?page=1"
-                        >1
-                      </a>
-                      <a
-                        class="rounded-lg flex bg-slate-200 dark:bg-emerald-800 items-center gap-2 border border-transparent px-3 py-1 transition duration-150 ease-in-out hover:bg-primary"
-                        href="/archive?page=2"
-                        >2
-                      </a>
-                    </div>
-
-                    <!-- last & next -->
-                    <div class="wt-button-font order-2 col-span-2 flex items-center gap-2">
-                      <a
-                        class="rounded-lg flex bg-slate-200 dark:bg-emerald-800 items-center gap-2 border border-transparent px-3 py-1 transition duration-150 ease-in-out hover:bg-primary"
-                        href="/archive?page=2"
-                      >
-                        Next
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          fill="none"
-                          viewBox="0 0 24 24"
-                          stroke-width="1.5"
-                          stroke="currentColor"
-                          aria-hidden="true"
-                          data-slot="icon"
-                          height="16px"
-                        >
-                          <path
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            d="m8.25 4.5 7.5 7.5-7.5 7.5"
-                          ></path>
-                        </svg>
-                      </a>
-                      <a
-                        class="rounded-lg flex bg-slate-200 dark:bg-emerald-800 items-center gap-2 border border-transparent px-3 py-1 transition duration-150 ease-in-out hover:bg-primary"
-                        href="/archive?page=13"
-                      >
-                        Last
-                      </a>
-                    </div>
-                  </div>
+                  <SearchComponent />
+                  <!-- <PaginationComponent /> -->
                 </div>
               </div>
             </div>

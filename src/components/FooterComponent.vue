@@ -84,9 +84,7 @@ import SocialComponent from '@/components/SocialComponent.vue'
           class="flex w-full flex-col items-center gap-y-4 sm:flex-row sm:justify-between sm:px-6"
         >
           <div class="w-full text-center sm:w-1/2 sm:text-left">
-            <p style="color: #222222" class="!text-xs text-md font-light font-ariel">
-              © 2024 Tech Letter.
-            </p>
+            <p class="text-xs text-slate-400 font-light font-ariel">© 2024 Tech Letter.</p>
           </div>
           <div
             class="flex w-full flex-col items-center gap-y-4 sm:w-1/2 sm:flex-row sm:justify-end sm:gap-x-4"
@@ -97,19 +95,13 @@ import SocialComponent from '@/components/SocialComponent.vue'
                 target="_blank"
                 class="whitespace-nowrap underline underline-offset-1 hover:opacity-80"
                 rel="noreferrer"
-                style="color: #222222"
-                ><p style="color: #222222" class="!text-xs text-md font-light font-ariel">
-                  Privacy Policy
-                </p></a
+                ><p class="!text-xs text-md font-light font-ariel">Privacy Policy</p></a
               ><a
                 href="https://beehiiv.com/tou"
                 target="_blank"
                 class="whitespace-nowrap underline underline-offset-1 hover:opacity-80"
                 rel="noreferrer"
-                style="color: #222222"
-                ><p style="color: #222222" class="!text-xs text-md font-light font-ariel">
-                  Terms of Use
-                </p></a
+                ><p class="!text-xs text-md font-light font-ariel">Terms of Use</p></a
               >
             </div>
             <div class="">

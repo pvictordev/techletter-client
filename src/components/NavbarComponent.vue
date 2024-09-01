@@ -1,17 +1,36 @@
 <script setup lang="ts">
 import TechIcon from './icons/TechIcon.vue'
-import LightMode from './icons/LightMode.vue'
-import DarkMode from './icons/DarkMode.vue'
+import BurgerIcon from './icons/BurgerIcon.vue'
 
-import { computed, onMounted } from 'vue'
+import { computed, onMounted, onUnmounted, ref } from 'vue'
 import { useThemeStore } from '@/stores/theme'
 
+// toggle dark mode
 const isDarkMode = computed(() => themeStore.isDarkMode)
-
 const themeStore = useThemeStore()
-
 onMounted(() => {
   themeStore.initTheme()
+})
+
+// toggle burger menu
+const isMenuVisible = ref(false)
+
+const toggleMenu = () => {
+  isMenuVisible.value = !isMenuVisible.value
+}
+
+const handleClickOutside = (event: MouseEvent) => {
+  const menuElement = document.getElementById('headlessui-menu-button-:Rd5al:')
+  if (menuElement && !menuElement.contains(event.target as Node)) {
+    isMenuVisible.value = false
+  }
+}
+onMounted(() => {
+  document.addEventListener('click', handleClickOutside)
+})
+
+onUnmounted(() => {
+  document.removeEventListener('click', handleClickOutside)
 })
 </script>
 
@@ -35,48 +54,17 @@ onMounted(() => {
               >
             </div></a
           >
-          <div class="block">
-            <div class="z-20 flex gap-1">
-              <a
-                class="transition:all rounded-wt px-2 py-2 rounded-md hover:bg-black/10"
-                href="/c/advertise"
-                ><span class="whitespace-nowrap text-xs sm:block text-md font-regular font-ariel"
-                  >Advertise</span
-                ></a
-              >
-            </div>
-          </div>
         </div>
         <div class="flex items-center space-x-2">
-          <div @click="themeStore.toggleDarkMode" class="block">
-            <div class="z-20 flex gap-1 cursor-pointer">
-              <p class="transition:all px-2 py-2 rounded-md hover:bg-black/10">
-                <span class="whitespace-nowrap text-xs sm:block text-md font-regular font-ariel">
-                  <!-- conditional rendering -->
-                  <DarkMode v-if="isDarkMode" />
-                  <LightMode v-else />
-                </span>
-              </p>
-            </div>
-          </div>
-          <div class="block">
-            <div class="z-20 flex gap-1">
-              <a class="transition:all px-2 py-2 rounded-md hover:bg-black/10" href="/authors"
-                ><span class="whitespace-nowrap text-xs sm:block text-md font-regular font-ariel"
-                  >Authors</span
-                ></a
-              >
-            </div>
-          </div>
           <div class="flex items-center space-x-2">
             <button class="border inline-flex items-center py-2 px-4 rounded-md">Login</button
             ><a
-              class="border inline-flex items-center py-2 px-4 rounded-md bg-primary"
+              class="border text-white inline-flex items-center py-2 px-4 rounded-md bg-primary"
               href="/subscribe"
               >Subscribe</a
             >
           </div>
-          <div class="relative inline-block text-left">
+          <div class="relative text-left z-20">
             <button
               aria-label="Menu"
               class="rounded-full transition-all"
@@ -85,23 +73,41 @@ onMounted(() => {
               aria-haspopup="menu"
               aria-expanded="false"
             >
-              <div class="mt-1.5 rounded hover:bg-black/5">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke-width="1.5"
-                  stroke="currentColor"
-                  aria-hidden="true"
-                  data-slot="icon"
-                  class="h-6 w-6"
+              <div @click="toggleMenu" class="relative mt-1.5 rounded hover:bg-black/10">
+                <BurgerIcon />
+
+                <div
+                  class="absolute dark:bg-emerald-800 right-0 top-9 mt-2 w-48 border shadow-lg rounded-lg p-1"
+                  v-if="isMenuVisible"
                 >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
-                  ></path>
-                </svg>
+                  <ul class="flex flex-col gap-2 py-1 px-2">
+                    <li class="hover:bg-black/20 rounded-md p-1">
+                      <a class="flex gap-2 items-center" href="/advertise">
+                        <i class="pi pi-share-alt"></i>
+                        Advertise
+                      </a>
+                    </li>
+                    <li class="hover:bg-black/20 rounded-md p-1">
+                      <a class="flex gap-2 items-center" href="/authors">
+                        <i class="pi pi-user"></i>
+                        Authors
+                      </a>
+                    </li>
+                    <li
+                      @click="themeStore.toggleDarkMode"
+                      class="hover:bg-black/20 rounded-md p-1 flex items-center"
+                    >
+                      <span v-if="isDarkMode" class="dark-mode flex items-center gap-2">
+                        <i class="pi pi-moon"></i>
+                        Dark
+                      </span>
+                      <span v-else class="light-mode flex items-center gap-2">
+                        <i class="pi pi-sun"></i>
+                        Light
+                      </span>
+                    </li>
+                  </ul>
+                </div>
               </div>
             </button>
           </div>

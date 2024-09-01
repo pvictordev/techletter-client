@@ -11,7 +11,7 @@
     {
       "id": 2,
       "title": "Open AI in a new scandal",
-      "image": "https://winbuzzer.com/wp-content/uploads/2023/02/openai-logo.png",
+      "image": "https://informantonline.com.ng/wp-content/uploads/2024/08/Pavel-Durov.jpg",
       "link": "/open-ai",
       "author": "István Domokos",
       "date": "Aug 30, 2024"
@@ -19,7 +19,55 @@
     {
       "id": 3,
       "title": "Microsoft lost 3 billion after North Corean cyberattack",
-      "image": "https://archello.s3.eu-central-1.amazonaws.com/images/2017/07/05/z02GSPMSHQMUCFotoBM13072.1507364013.4859.jpg",
+      "image": "https://informantonline.com.ng/wp-content/uploads/2024/08/Pavel-Durov.jpg",
+      "link": "/open-ai",
+      "author": "Alexandru Maereanu",
+      "date": "Aug 30, 2024"
+    },
+    {
+      "id": 4,
+      "title": "Pavel Durov was arested in France",
+      "image": "https://informantonline.com.ng/wp-content/uploads/2024/08/Pavel-Durov.jpg",
+      "link": "/pavel-durov",
+      "author": "Victor Purice",
+      "date": "Aug 30, 2024"
+    },
+    {
+      "id": 5,
+      "title": "Open AI in a new scandal",
+      "image": "https://informantonline.com.ng/wp-content/uploads/2024/08/Pavel-Durov.jpg",
+      "link": "/open-ai",
+      "author": "István Domokos",
+      "date": "Aug 30, 2024"
+    },
+    {
+      "id": 6,
+      "title": "Microsoft lost 3 billion after North Corean cyberattack",
+      "image": "https://informantonline.com.ng/wp-content/uploads/2024/08/Pavel-Durov.jpg",
+      "link": "/open-ai",
+      "author": "Alexandru Maereanu",
+      "date": "Aug 30, 2024"
+    },
+    {
+      "id": 7,
+      "title": "I exist",
+      "image": "https://informantonline.com.ng/wp-content/uploads/2024/08/Pavel-Durov.jpg",
+      "link": "/open-ai",
+      "author": "István Domokos",
+      "date": "Aug 30, 2024"
+    },
+    {
+      "id": 8,
+      "title": "Me too",
+      "image": "https://informantonline.com.ng/wp-content/uploads/2024/08/Pavel-Durov.jpg",
+      "link": "/open-ai",
+      "author": "Alexandru Maereanu",
+      "date": "Aug 30, 2024"
+    },
+    {
+      "id": 9,
+      "title": "And me !!",
+      "image": "https://informantonline.com.ng/wp-content/uploads/2024/08/Pavel-Durov.jpg",
       "link": "/open-ai",
       "author": "Alexandru Maereanu",
       "date": "Aug 30, 2024"
@@ -34,12 +82,12 @@
     {
       "id": 2,
       "name": "Alexandru Maereanu",
-      "profile": "https://informantonline.com.ng/wp-content/uploads/2024/08/Pavel-Durov.jpg"
+      "profile": "https://upload.wikimedia.org/wikipedia/commons/0/06/Ryan_Gosling_-_Cannes_Film_Festival_-_02.jpg"
     },
     {
       "id": 3,
       "name": "István Domokos",
-      "profile": "https://informantonline.com.ng/wp-content/uploads/2024/08/Pavel-Durov.jpg"
+      "profile": "https://upload.wikimedia.org/wikipedia/commons/0/06/Ryan_Gosling_-_Cannes_Film_Festival_-_02.jpg"
     }
   ]
 }
