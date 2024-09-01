@@ -37,6 +37,7 @@ onUnmounted(() => {
   document.removeEventListener('click', handleClickOutside)
 })
 
+// dialog toggle
 const visible = ref(false)
 </script>
 
@@ -87,14 +88,14 @@ const visible = ref(false)
                   class="absolute dark:bg-emerald-800 right-0 top-9 mt-2 w-48 border shadow-lg rounded-lg p-1"
                   v-if="isMenuVisible"
                 >
-                  <ul class="flex flex-col gap-2 py-1 px-2">
-                    <li class="hover:bg-black/20 rounded-md p-1">
+                  <ul class="flex flex-col gap-1 py-1 px-2">
+                    <li class="hover:bg-black/20 rounded-md p-2">
                       <a class="flex gap-2 items-center" href="/advertise">
                         <i class="pi pi-share-alt"></i>
                         Advertise
                       </a>
                     </li>
-                    <li class="hover:bg-black/20 rounded-md p-1">
+                    <li class="hover:bg-black/20 rounded-md p-2">
                       <a class="flex gap-2 items-center" href="/authors">
                         <i class="pi pi-user"></i>
                         Authors
@@ -102,7 +103,7 @@ const visible = ref(false)
                     </li>
                     <li
                       @click="themeStore.toggleDarkMode"
-                      class="hover:bg-black/20 rounded-md p-1 flex items-center"
+                      class="hover:bg-black/20 rounded-md p-2 flex items-center"
                     >
                       <span v-if="isDarkMode" class="dark-mode flex items-center gap-2">
                         <i class="pi pi-moon"></i>

@@ -1,34 +1,7 @@
 <script setup lang="ts">
-import { useToast } from 'vue-toastification'
-import { ref } from 'vue'
+import { toastComposable } from '@/composables/toastComposable'
 
-const toast = useToast()
-const email = ref('')
-const errorMessage = ref('')
-
-const validateEmail = (email: string): boolean => {
-  const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
-  return regex.test(email)
-}
-
-const handleSubmit = () => {
-  if (validateEmail(email.value)) {
-    errorMessage.value = ''
-    email.value = ''
-    showSuccess()
-  } else {
-    showFailure()
-    errorMessage.value = 'Please enter a valid email address.'
-  }
-}
-
-const showSuccess = () => {
-  toast.success('Successfully subscribed !')
-}
-
-const showFailure = () => {
-  toast.error('Enter a valid email address')
-}
+const { email, errorMessage, handleSubmit } = toastComposable()
 </script>
 
 <template>
@@ -58,8 +31,8 @@ const showFailure = () => {
         />
       </div>
       <!-- <p v-if="errorMessage" class="text-red-500 text-sm mt-2">
-                            {{ errorMessage }}
-                          </p> -->
+        {{ errorMessage }}
+      </p> -->
     </div>
   </form>
 </template>
