@@ -11,7 +11,9 @@ const app = createApp(App)
 
 app.use(createPinia())
 app.use(PrimeVue, {
-  unstyled: true
+  theme: {
+    unstyled: true
+  }
 })
 app.use(router)
 
