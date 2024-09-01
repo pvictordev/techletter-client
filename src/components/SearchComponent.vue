@@ -19,11 +19,11 @@ const loading = ref<boolean>(false)
 
 const filteredCards = computed(() => {
   if (searchQuery.value.trim() === '') {
-    return cards.value
+    return cards.value.slice(0, 6)
   }
-  return cards.value.filter((card) =>
-    card.title.toLowerCase().includes(searchQuery.value.toLowerCase())
-  )
+  return cards.value
+    .filter((card) => card.title.toLowerCase().includes(searchQuery.value.toLowerCase()))
+    .slice(0, 6)
 })
 
 const handleSearchInput = (): void => {
@@ -36,7 +36,7 @@ const handleSearchInput = (): void => {
 
   setTimeout(() => {
     loading.value = false
-  }, 500)
+  }, 1000)
 }
 
 watch(
@@ -48,7 +48,7 @@ watch(
       loading.value = true
       setTimeout(() => {
         loading.value = false
-      }, 500)
+      }, 1000)
     }
   },
   { immediate: true }
@@ -68,7 +68,6 @@ watch(
           class="rounded-lg bg-slate-100 dark:bg-emerald-950 border focus:outline-none p-2 border-slate-100 w-full max-w-none pl-8"
           placeholder="Search posts..."
           type="text"
-          name=""
         />
       </div>
     </div>

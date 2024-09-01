@@ -2,7 +2,7 @@
 import TechIcon from '@/components/icons/TechIcon.vue'
 import SocialComponent from '@/components/SocialComponent.vue'
 import SearchComponent from '@/components/SearchComponent.vue'
-import PaginationComponent from '@/components/PaginationComponent.vue'
+// import PaginationComponent from '@/components/PaginationComponent.vue'
 </script>
 
 <template>
@@ -121,10 +121,8 @@ import PaginationComponent from '@/components/PaginationComponent.vue'
             <div class="grid w-full grid-cols-12">
               <div class="order-last col-span-12 pb-4 pt-2 lg:order-first mb-8">
                 <div>
-                  <!-- search component -->
                   <SearchComponent />
-                  <!-- pagination component -->
-                  <PaginationComponent />
+                  <!-- <PaginationComponent /> -->
                 </div>
               </div>
             </div>
