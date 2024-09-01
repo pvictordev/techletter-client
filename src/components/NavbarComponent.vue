@@ -96,10 +96,10 @@ const visible = ref(false)
                       </a>
                     </li>
                     <li class="hover:bg-black/20 rounded-md p-2">
-                      <a class="flex gap-2 items-center" href="/authors">
+                      <router-link to="/authors" class="flex gap-2 items-center">
                         <i class="pi pi-user"></i>
                         Authors
-                      </a>
+                      </router-link>
                     </li>
                     <li
                       @click="themeStore.toggleDarkMode"

@@ -11,7 +11,7 @@ defineProps<{
 <template>
   <div class="transparent h-full cursor-pointer border overflow-hidden rounded-2xl flex flex-col">
     <div class="relative w-full article-image">
-      <a class="" href="">
+      <router-link class="" to="/authors/:id">
         <div class="w-full">
           <figure class="relative h-full aspect-social overflow-hidden w-full">
             <img
@@ -23,7 +23,7 @@ defineProps<{
             />
           </figure>
         </div>
-      </a>
+      </router-link>
     </div>
 
     <h2 class="p-3 text-xl font-medium">{{ author.name }}</h2>
