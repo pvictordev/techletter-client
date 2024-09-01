@@ -2,6 +2,10 @@
 import TechIcon from './icons/TechIcon.vue'
 import BurgerIcon from './icons/BurgerIcon.vue'
 
+import Dialog from 'primevue/dialog'
+import InputText from 'primevue/inputtext'
+import Button from 'primevue/button'
+
 import { computed, onMounted, onUnmounted, ref } from 'vue'
 import { useThemeStore } from '@/stores/theme'
 
@@ -32,6 +36,8 @@ onMounted(() => {
 onUnmounted(() => {
   document.removeEventListener('click', handleClickOutside)
 })
+
+const visible = ref(false)
 </script>
 
 <template>
@@ -57,12 +63,13 @@ onUnmounted(() => {
         </div>
         <div class="flex items-center space-x-2">
           <div class="flex items-center space-x-2">
-            <button class="border inline-flex items-center py-2 px-4 rounded-md">Login</button
-            ><a
+            <button class="border inline-flex items-center py-2 px-4 rounded-md">Login</button>
+            <button
+              @click="visible = true"
               class="border text-white inline-flex items-center py-2 px-4 rounded-md bg-primary"
-              href="/subscribe"
-              >Subscribe</a
             >
+              Subscribe
+            </button>
           </div>
           <div class="relative text-left z-20">
             <button
@@ -115,4 +122,17 @@ onUnmounted(() => {
       </div>
     </div>
   </nav>
+  <!-- dialog subscribe -->
+  <Dialog v-model:visible="visible" modal header="Edit Profile" :style="{ width: '25rem' }">
+    <template #header>
+      <div class="inline-flex items-center justify-center gap-2">
+        <TechIcon size="w-8 h-8" />
+        <span class="font-bold whitespace-nowrap">Subscribe to Tech Letter !</span>
+      </div>
+    </template>
+    <div class="flex items-center gap-2 mb-4">
+      <InputText id="username" class="flex-auto" autocomplete="off" />
+      <Button @click="visible = false">Subscribe</Button>
+    </div>
+  </Dialog>
 </template>
