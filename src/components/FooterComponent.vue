@@ -58,7 +58,7 @@ import SocialComponent from '@/components/SocialComponent.vue'
                     <div class="flex w-full items-center">
                       <input
                         autocomplete="email"
-                        class="wt-button-font p-2 focus:outline-none z-10 w-full bg-transparent placeholder-shown:text-ellipsis text-lg focus:text-lg active:text-lg sm:text-lg"
+                        class="text-black p-2 focus:outline-none z-10 w-full bg-transparent placeholder-shown:text-ellipsis text-lg focus:text-lg active:text-lg sm:text-lg"
                         placeholder="Enter your email"
                         type="email"
                         name="email"
