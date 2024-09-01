@@ -8,7 +8,7 @@ const authors = ref(authorsData.authors)
 </script>
 
 <template>
-  <div class="flex min-h-screen">
+  <div class="flex min-h-screen dark:bg-emerald-950 dark:text-white">
     <main class="flex-grow">
       <div class="px-4">
         <div class="mx-auto mt-8 max-w-6xl py-4">

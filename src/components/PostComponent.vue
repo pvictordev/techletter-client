@@ -35,7 +35,7 @@ defineProps<{
           <div class="space-y-2">
             <div class="flex flex-wrap-reverse items-center justify-between">
               <div class="flex items-center space-x-1">
-                <span class="text-gray-600 text-xs sm:text-sm font-light font-helvetica">
+                <span class="text-slate-400 text-xs sm:text-sm font-light font-helvetica">
                   <time datetime="2024-08-30T12:00:00.000Z">{{ card.date }}</time></span
                 >
               </div>

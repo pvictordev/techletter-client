@@ -4,7 +4,7 @@ import SocialComponent from '@/components/SocialComponent.vue'
 </script>
 
 <template>
-  <footer class="px-4 sm:px-6 py-8" style="background-color: #ffffff">
+  <footer class="px-4 sm:px-6 py-8 dark:bg-emerald-950 dark:text-white">
     <div class="mx-auto w-full max-w-6xl">
       <div class="flex flex-col gap-y-6">
         <!-- top part -->

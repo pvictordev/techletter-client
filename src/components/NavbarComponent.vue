@@ -1,9 +1,24 @@
 <script setup lang="ts">
 import TechIcon from './icons/TechIcon.vue'
+import LightMode from './icons/LightMode.vue'
+import DarkMode from './icons/DarkMode.vue'
+
+import { computed, onMounted } from 'vue'
+import { useThemeStore } from '@/stores/theme'
+
+const isDarkMode = computed(() => themeStore.isDarkMode)
+
+const themeStore = useThemeStore()
+
+onMounted(() => {
+  themeStore.initTheme()
+})
 </script>
 
 <template>
-  <nav class="px-4 sm:px-6 w-full py-2">
+  <nav
+    class="px-4 sm:px-6 w-full transform transition-transform duration-500 ease-in-out py-2 dark:bg-emerald-950 dark:text-white"
+  >
     <div class="mx-auto w-full max-w-6xl">
       <div class="mx-auto flex items-center justify-between">
         <div class="flex items-center space-x-2">
@@ -31,6 +46,17 @@ import TechIcon from './icons/TechIcon.vue'
           </div>
         </div>
         <div class="flex items-center space-x-2">
+          <div @click="themeStore.toggleDarkMode" class="block">
+            <div class="z-20 flex gap-1 cursor-pointer">
+              <p class="transition:all rounded-md px-2 py-2 hover:bg-black/5">
+                <span class="whitespace-nowrap text-xs sm:block text-md font-regular font-ariel">
+                  <!-- conditional rendering -->
+                  <DarkMode v-if="isDarkMode" />
+                  <LightMode v-else />
+                </span>
+              </p>
+            </div>
+          </div>
           <div class="block">
             <div class="z-20 flex gap-1">
               <a class="transition:all rounded-wt px-2 py-2 hover:bg-black/5" href="/authors"
