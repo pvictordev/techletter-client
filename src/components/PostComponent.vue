@@ -14,7 +14,7 @@ defineProps<{
 <template>
   <div class="transparent h-full cursor-pointer overflow-hidden rounded-2xl flex flex-col border">
     <div class="relative w-full article-image">
-      <a class="" :href="card.link">
+      <router-link to="/posts/:id" class="">
         <div class="w-full">
           <figure class="relative h-full aspect-social overflow-hidden w-full">
             <img
@@ -26,7 +26,7 @@ defineProps<{
             />
           </figure>
         </div>
-      </a>
+      </router-link>
     </div>
 
     <div class="w-full p-3">

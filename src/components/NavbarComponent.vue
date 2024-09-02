@@ -85,7 +85,7 @@ const visible = ref(false)
                 <BurgerIcon />
 
                 <div
-                  class="absolute dark:bg-emerald-800 right-0 top-9 mt-2 w-48 border shadow-lg rounded-lg p-1"
+                  class="absolute bg-white dark:bg-emerald-800 right-0 top-9 mt-2 w-48 border shadow-lg rounded-lg p-1"
                   v-if="isMenuVisible"
                 >
                   <ul class="flex flex-col gap-1 py-1 px-2">
