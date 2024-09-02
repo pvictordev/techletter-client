@@ -65,7 +65,7 @@ const visible = ref(false)
         <div class="flex items-center space-x-2">
           <div class="flex items-center space-x-2">
             <button
-              class="border inline-flex items-center py-2 px-4 rounded-md transition-all transition-300 hover:bg-slate-200"
+              class="border inline-flex items-center py-2 px-4 rounded-md transition-all transition-300 hover:bg-white/10"
             >
               Login
             </button>
@@ -85,7 +85,10 @@ const visible = ref(false)
               aria-haspopup="menu"
               aria-expanded="false"
             >
-              <div @click="toggleMenu" class="relative mt-1.5 rounded hover:bg-black/10">
+              <div
+                @click="toggleMenu"
+                class="relative mt-1.5 rounded dark:hover:bg-white/10 hover:bg-black/10"
+              >
                 <BurgerIcon />
 
                 <div
@@ -93,7 +96,7 @@ const visible = ref(false)
                   v-if="isMenuVisible"
                 >
                   <ul class="flex flex-col gap-1 py-1 px-2">
-                    <li class="hover:bg-black/20 rounded-md p-2">
+                    <li class="hover:bg-black/10 dark:hover:bg-white/10 rounded-md p-2">
                       <router-link to="/authors" class="flex gap-2 items-center">
                         <i class="pi pi-users"></i>
                         Authors
@@ -101,7 +104,7 @@ const visible = ref(false)
                     </li>
                     <li
                       @click="themeStore.toggleDarkMode"
-                      class="hover:bg-black/20 rounded-md p-2 flex items-center"
+                      class="hover:bg-black/10 dark:hover:bg-white/10 rounded-md p-2 flex items-center"
                     >
                       <span v-if="isDarkMode" class="dark-mode flex items-center gap-2">
                         <i class="pi pi-moon"></i>

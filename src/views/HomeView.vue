@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import TechIcon from '@/components/icons/TechIcon.vue'
 import SocialComponent from '@/components/SocialComponent.vue'
-import SearchComponent from '@/components/SearchComponent.vue'
-import FormComponent from '@/components/FormComponent.vue'
+import SearchComponent from '@/components/home/SearchComponent.vue'
+import FormComponent from '@/components/home/FormComponent.vue'
 </script>
 
 <template>
@@ -11,24 +11,24 @@ import FormComponent from '@/components/FormComponent.vue'
       <div class="min-h-screen overflow-x-hidden">
         <!-- top part -->
         <div class="py-12 pt-28 pb-20">
-          <div class="left-0 top-0 h-full w-full">
+          <div class="left-0 top-0 h-full">
             <div class="px-4 sm:px-6">
-              <div class="mx-auto w-full max-w-6xl">
+              <div class="mx-auto max-w-6xl">
                 <!-- subscribe -->
-                <div class="mx-auto mb-10 w-full max-w-2xl p-0 rounded-lg border-none">
+                <div class="mx-auto mb-10 max-w-2xl p-0 rounded-lg border-none">
                   <div class="flex-start flex flex-col items-center py-2">
                     <div class="mb-4 overflow-hidden rounded h-24 w-24">
-                      <figure class="aspect-square relative h-full overflow-hidden w-full">
+                      <figure class="aspect-square relative h-full overflow-hidden">
                         <TechIcon size="h-24 w-24" />
                       </figure>
                     </div>
                     <div class="space-y-4">
-                      <div class="mx-auto w-full max-w-xl">
-                        <h1 class="w-full text-center text-4xl sm:text-5xl font-bold font-ariel">
+                      <div class="mx-auto max-w-xl">
+                        <h1 class="text-center text-4xl sm:text-5xl font-bold font-ariel">
                           <span>Tech Letter</span>
                         </h1>
                       </div>
-                      <p class="w-full text-center text-lg sm:text-xl font-regular font-ariel">
+                      <p class="text-center text-lg sm:text-xl font-regular font-ariel">
                         <span
                           >Tech Letter is a newsletter made for tech enthusiast to get the most
                           significant news form tech world. Join the fastest growing community of
@@ -39,7 +39,7 @@ import FormComponent from '@/components/FormComponent.vue'
                   </div>
 
                   <div class="mx-auto mt-4 max-w-sm sm:max-w-lg">
-                    <div class="flex w-full flex-col items-center">
+                    <div class="flex flex-col items-center">
                       <FormComponent />
                     </div>
                   </div>
@@ -79,8 +79,8 @@ import FormComponent from '@/components/FormComponent.vue'
 
         <!-- bottom part -->
         <div class="px-4 sm:px-6 pt-0">
-          <div class="mx-auto w-full max-w-6xl">
-            <div class="grid w-full grid-cols-12">
+          <div class="mx-auto max-w-6xl">
+            <div class="grid grid-cols-12">
               <div class="order-last col-span-12 pb-4 pt-2 lg:order-first mb-8">
                 <div>
                   <SearchComponent />

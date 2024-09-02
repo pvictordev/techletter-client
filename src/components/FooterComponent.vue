@@ -2,7 +2,7 @@
 import TechIcon from './icons/TechIcon.vue'
 import BehiivIcon from './icons/BehiivIcon.vue'
 import SocialComponent from '@/components/SocialComponent.vue'
-import FormComponent from './FormComponent.vue'
+import FormComponent from './home/FormComponent.vue'
 </script>
 
 <template>

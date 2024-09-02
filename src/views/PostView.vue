@@ -1,8 +1,9 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 import BreadCrumb from '@/components/BreadCrumb.vue'
-import ActionButtons from '@/components/ActionButtons.vue'
+import ActionButtons from '@/components/posts/ActionButtons.vue'
 import CommentsReply from '@/components/posts/CommentsReply.vue'
+import ArticleComponent from '@/components/posts/ArticleComponent.vue'
 
 const breadcrumbs = ref([
   { label: 'Tech Letter', link: '/' },
@@ -26,11 +27,12 @@ const breadcrumbs = ref([
         <!-- heading -->
         <div class="">
           <div class="mx-auto flex max-w-2xl flex-col pb-4">
-            <!-- top bar -->
-            <div class="mt-8 mb-6" style="padding-left: 14px; padding-right: 14px">
+            <!-- breadcrumb nav -->
+            <div class="mt-8 mb-6 px-3">
               <BreadCrumb :breadcrumbs="breadcrumbs" />
             </div>
-            <!-- title -->
+
+            <!-- top part -->
             <div class="flex">
               <div class="web-header pt-0 p-3">
                 <h1 class="text-4xl pb-8 font-bold">
@@ -38,48 +40,28 @@ const breadcrumbs = ref([
                 </h1>
                 <div class="line-wrapper">
                   <div>
-                    <div style="display: flex">
-                      <div style="display: flex; flex-direction: row; justify-content: flex-start">
-                        <div style="display: flex">
+                    <div class="flex">
+                      <div class="flex flex-start">
+                        <div class="flex">
+                          <!-- profile pic -->
                           <img
                             alt="Author"
                             height="40"
+                            class="w-12 h-12 rounded-full bg-cover"
                             src="https://upload.wikimedia.org/wikipedia/commons/0/06/Ryan_Gosling_-_Cannes_Film_Festival_-_02.jpg"
-                            style="
-                              height: 40px;
-                              width: 40px;
-                              border: 4px solid rgba(0, 0, 0, 0);
-                              left: -4px;
-                              z-index: 10;
-                              box-sizing: content-box;
-                              position: relative;
-                              border-radius: 9999px;
-                            "
                             width="40"
                           />
                         </div>
-                        <div style="display: flex; align-items: center">
-                          <p
-                            style="
-                              left: 8px;
-                              position: relative;
-                              font-family: 'Helvetica', Arial, sans-serif;
-                              font-weight: normal;
-                              font-size: 14px;
-                              color: var(--wt-text-on-background-color);
-                              margin: 0px;
-                              line-height: 20px;
-                            "
+                        <div class="flex items-center gap-2">
+                          <a
+                            href="https://www.devnotesdaily.com/authors/bcf5db93-2b19-4bae-9513-5ac18880757b"
+                            target="_blank"
                           >
-                            <span
-                              ><a
-                                href="https://www.devnotesdaily.com/authors/bcf5db93-2b19-4bae-9513-5ac18880757b"
-                                target="_blank"
-                                >Victor Purice</a
-                              ></span
-                            ><br /><span class="text-wt-text-on-background" style="opacity: 0.75">
-                              August 28, 2024
-                            </span>
+                          </a>
+
+                          <p class="flex flex-col">
+                            <span class="underline">Victor Purice</span>
+                            <span class="text-slate-500">August 28, 2024</span>
                           </p>
                         </div>
                       </div>
@@ -88,6 +70,7 @@ const breadcrumbs = ref([
                 </div>
               </div>
             </div>
+
             <!-- content -->
             <div class="content p-3 flex flex-col gap-3">
               <img
@@ -134,64 +117,15 @@ const breadcrumbs = ref([
             Keep reading
           </h4>
           <div class="space-y-6">
-            <div class="flex flex-col">
-              <!-- particular article -->
-              <a
-                class="group relative flex rounded-wt w-full grid-cols-1 transition-all hover:bg-opacity-25 sm:my-6 sm:grid-cols-2 flex-row mb-6 gap-y-0 sm:mb-0 hover:bg-slate-100/50"
-                href="/p/googles-search-monopoly-hammer-falls"
-                ><div
-                  class="z-10 col-span-1 w-full overflow-hidden rounded-wt border bg-slate-100/50"
-                >
-                  <figure class="aspect-social relative h-full overflow-hidden w-full">
-                    <img
-                      loading="lazy"
-                      width="800"
-                      height="421"
-                      src="https://media.beehiiv.com/cdn-cgi/image/format=auto,width=800,height=421,fit=scale-down,onerror=redirect/uploads/asset/file/5a99538a-d9b7-41d3-9ee1-dd6667d27ca8/google.png"
-                      alt="Google's Search Monopoly: The Hammer Falls"
-                      class="absolute inset-0 h-full w-full object-cover"
-                    />
-                  </figure>
-                </div>
-                <div class="z-10 col-span-1 p-4">
-                  <h2
-                    class="line-clamp-2 text-wt-text-on-background wt-header-font text-wt-text-on-background text-md font-bold"
-                  >
-                    Google's Search Monopoly: The Hammer Falls
-                  </h2>
-                  <p
-                    class="font-regular mb-2 text-wt-text-on-background opacity-75 wt-header-font line-clamp-4 text-wt-text-on-background text-sm font-regular"
-                  ></p>
-                  <p
-                    class="mb-4 text-wt-text-on-background no-underline opacity-75 wt-header-font text-wt-text-on-background text-xs sm:text-sm font-regular"
-                  >
-                    <span></span><time datetime="2024-08-07T12:00:00.000Z"></time>
-                  </p></div
-              ></a>
-            </div>
+            <!-- particular article -->
+            <ArticleComponent />
 
             <!-- view more button -->
             <button
               type="button"
               class="hover flex items-center text-sm text-wt-primary transition-all hover:font-medium"
             >
-              <span>View more</span
-              ><svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke-width="1.5"
-                stroke="currentColor"
-                aria-hidden="true"
-                data-slot="icon"
-                class="ml-0.5 h-3 w-3 pt-0.5"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="m8.25 4.5 7.5 7.5-7.5 7.5"
-                ></path>
-              </svg>
+              <span>View more <i class="pi pi-arrow-right"></i></span>
             </button>
           </div>
         </div>

@@ -14,7 +14,7 @@ const breadcrumbs = ref([
 
 <template>
   <div class="flex min-h-screen flex-col dark:bg-emerald-950 dark:text-white">
-    <main class="flex-grow">
+    <main class="flex-grow mt-14">
       <div class="px-4">
         <div class="mx-auto mt-8 max-w-6xl py-4">
           <BreadCrumb :breadcrumbs="breadcrumbs" />
