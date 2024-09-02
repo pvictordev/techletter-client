@@ -43,7 +43,7 @@ const visible = ref(false)
 
 <template>
   <nav
-    class="px-4 sm:px-6 w-full transform transition-transform duration-500 ease-in-out py-2 dark:bg-emerald-950 dark:text-white"
+    class="px-4 fixed sm:px-6 w-full bg-white z-20 transform transition-transform duration-500 ease-in-out py-2 dark:bg-emerald-950 dark:text-white"
   >
     <div class="mx-auto w-full max-w-6xl">
       <div class="mx-auto flex items-center justify-between">
@@ -64,15 +64,19 @@ const visible = ref(false)
         </div>
         <div class="flex items-center space-x-2">
           <div class="flex items-center space-x-2">
-            <button class="border inline-flex items-center py-2 px-4 rounded-md">Login</button>
+            <button
+              class="border inline-flex items-center py-2 px-4 rounded-md transition-all transition-300 hover:bg-slate-200"
+            >
+              Login
+            </button>
             <button
               @click="visible = true"
-              class="border text-white inline-flex items-center py-2 px-4 rounded-md bg-primary"
+              class="border text-white inline-flex items-center py-2 px-4 transition-all transition-300 rounded-md bg-primary hover:bg-emerald-600"
             >
               Subscribe
             </button>
           </div>
-          <div class="relative text-left z-20">
+          <div class="relative text-left">
             <button
               aria-label="Menu"
               class="rounded-full transition-all"

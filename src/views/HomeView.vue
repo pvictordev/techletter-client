@@ -10,7 +10,7 @@ import FormComponent from '@/components/FormComponent.vue'
     <main class="flex-grow">
       <div class="min-h-screen overflow-x-hidden">
         <!-- top part -->
-        <div class="py-12 pb-20">
+        <div class="py-12 pt-28 pb-20">
           <div class="left-0 top-0 h-full w-full">
             <div class="px-4 sm:px-6">
               <div class="mx-auto w-full max-w-6xl">

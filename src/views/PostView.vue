@@ -2,6 +2,7 @@
 import { ref } from 'vue'
 import BreadCrumb from '@/components/BreadCrumb.vue'
 import ActionButtons from '@/components/ActionButtons.vue'
+import CommentsReply from '@/components/posts/CommentsReply.vue'
 
 const breadcrumbs = ref([
   { label: 'Tech Letter', link: '/' },
@@ -19,7 +20,7 @@ const breadcrumbs = ref([
         </div>
       </div>
 
-      <div class="mx-auto max-w-6xl px-4">
+      <div class="mx-auto max-w-6xl px-4 mt-14">
         <!-- actions buttons -->
         <ActionButtons />
         <!-- heading -->
