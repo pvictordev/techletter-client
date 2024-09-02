@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import SocialItem from './SocialItem.vue'
 import TelegramIcon from './icons/social/TelegramIcon.vue'
-import TiktokIcon from './icons/social/TiktokIcon.vue'
+import GithubIcon from './icons/social/GithubIcon.vue'
 import YoutubeIcon from './icons/social/YoutubeIcon.vue'
 import DevtoIcon from './icons/social/DevtoIcon.vue'
 import TwitterIcon from './icons/social/TwitterIcon.vue'
@@ -22,6 +22,26 @@ import TwitterIcon from './icons/social/TwitterIcon.vue'
           >
             <div class="rounded-full bg-primary p-2 text-white">
               <TwitterIcon />
+            </div>
+          </a>
+        </div>
+      </template>
+    </SocialItem>
+
+    <SocialItem>
+      <template #icon>
+        <div
+          class="flex flex-wrap items-center justify-center gap-2 sm:items-start sm:justify-start"
+        >
+          <a
+            target="_blank"
+            rel="noreferrer"
+            href="https://twitter.com/"
+            aria-label="Twitter"
+            class="relative p-2"
+          >
+            <div class="rounded-full bg-primary p-2 text-white">
+              <GithubIcon />
             </div>
           </a>
         </div>
@@ -82,26 +102,6 @@ import TwitterIcon from './icons/social/TwitterIcon.vue'
           >
             <div class="rounded-full bg-primary p-2 text-white">
               <YoutubeIcon />
-            </div>
-          </a>
-        </div>
-      </template>
-    </SocialItem>
-
-    <SocialItem>
-      <template #icon>
-        <div
-          class="flex flex-wrap items-center justify-center gap-2 sm:items-start sm:justify-start"
-        >
-          <a
-            target="_blank"
-            rel="noreferrer"
-            href="https://twitter.com/"
-            aria-label="Twitter"
-            class="relative p-2"
-          >
-            <div class="rounded-full bg-primary p-2 text-white">
-              <TiktokIcon />
             </div>
           </a>
         </div>

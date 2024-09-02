@@ -1,10 +1,11 @@
 <script setup lang="ts">
 import AuthorComponent from '@/components/AuthorComponent.vue'
-
 import authorsData from '@/assets/data.json'
 import { ref } from 'vue'
+import BreadCrumb from '@/components/BreadCrumb.vue'
 
 const authors = ref(authorsData.authors)
+const breadcrumbs = ref([{ label: 'Tech Letter', link: '/' }, { label: 'Authors' }])
 </script>
 
 <template>
@@ -12,30 +13,8 @@ const authors = ref(authorsData.authors)
     <main class="flex-grow">
       <div class="px-4">
         <div class="mx-auto mt-8 max-w-6xl py-4">
-          <ul class="flex flex-wrap items-center gap-2 text-xs font-semibold">
-            <li class="flex items-center gap-2">
-              <a href="../" class="opacity-70">Tech Letter</a
-              ><svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke-width="1.5"
-                stroke="currentColor"
-                aria-hidden="true"
-                data-slot="icon"
-                height="14px"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="m8.25 4.5 7.5 7.5-7.5 7.5"
-                ></path>
-              </svg>
-            </li>
-            <li class="flex items-center gap-2">
-              <span class="!opacity-100">Authors</span>
-            </li>
-          </ul>
+          <!-- breadcrumb navigation -->
+          <BreadCrumb :breadcrumbs="breadcrumbs" />
         </div>
         <div class="mx-auto flex w-full max-w-6xl pb-16 pt-4">
           <div class="flex w-full flex-col space-y-8">

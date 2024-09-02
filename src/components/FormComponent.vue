@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { toastComposable } from '@/composables/toastComposable'
 
-const { email, errorMessage, handleSubmit } = toastComposable()
+const { email, handleSubmit } = toastComposable()
 </script>
 
 <template>
@@ -30,9 +30,6 @@ const { email, errorMessage, handleSubmit } = toastComposable()
           value="Subscribe"
         />
       </div>
-      <!-- <p v-if="errorMessage" class="text-red-500 text-sm mt-2">
-        {{ errorMessage }}
-      </p> -->
     </div>
   </form>
 </template>

@@ -30,11 +30,12 @@ import FormComponent from './FormComponent.vue'
             <div class="flex grow basis-0 flex-col gap-y-3">
               <p class="text-xs sm:text-sm font-semibold font-ariel">Home</p>
               <div class="flex flex-col gap-y-2">
-                <a class="sm:max-w-36 sm:text-wrap" href="/"
-                  ><p class="text-xs sm:text-sm font-regular font-ariel">Posts</p></a
-                ><a class="sm:max-w-36 sm:text-wrap" href="/authors"
-                  ><p class="text-xs sm:text-sm font-regular font-ariel">Authors</p></a
-                >
+                <a class="sm:max-w-36 sm:text-wrap" href="/">
+                  <p class="text-xs sm:text-sm font-regular font-ariel">Posts</p>
+                </a>
+                <router-link class="sm:max-w-36 sm:text-wrap" to="/authors">
+                  <p class="text-xs sm:text-sm font-regular font-ariel">Authors</p>
+                </router-link>
               </div>
             </div>
 

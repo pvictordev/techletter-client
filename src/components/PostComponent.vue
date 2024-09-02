@@ -18,6 +18,7 @@ defineProps<{
         <div class="w-full">
           <figure class="relative h-full aspect-social overflow-hidden w-full">
             <img
+              loading="lazy"
               width="800"
               height="421"
               :src="card.image"
@@ -85,6 +86,7 @@ defineProps<{
           <div class="flex -space-x-1.5 overflow-hidden">
             <div class="h-7 w-7 rounded-full">
               <img
+                loading="lazy"
                 class="inline-block h-7 w-7 rounded-full"
                 src="https://static.vecteezy.com/system/resources/previews/018/765/757/original/user-profile-icon-in-flat-style-member-avatar-illustration-on-isolated-background-human-permission-sign-business-concept-vector.jpg"
                 alt="Victor Purice"

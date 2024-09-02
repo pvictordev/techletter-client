@@ -2,7 +2,6 @@
 import TechIcon from '@/components/icons/TechIcon.vue'
 import SocialComponent from '@/components/SocialComponent.vue'
 import SearchComponent from '@/components/SearchComponent.vue'
-// import PaginationComponent from '@/components/PaginationComponent.vue'
 import FormComponent from '@/components/FormComponent.vue'
 </script>
 
@@ -11,7 +10,7 @@ import FormComponent from '@/components/FormComponent.vue'
     <main class="flex-grow">
       <div class="min-h-screen overflow-x-hidden">
         <!-- top part -->
-        <div class="py-12">
+        <div class="py-12 pb-20">
           <div class="left-0 top-0 h-full w-full">
             <div class="px-4 sm:px-6">
               <div class="mx-auto w-full max-w-6xl">
@@ -45,9 +44,8 @@ import FormComponent from '@/components/FormComponent.vue'
                     </div>
                   </div>
                 </div>
-                <!-- links -->
                 <div class="flex flex-wrap items-end justify-between gap-4">
-                  <!-- newsletter update -->
+                  <!-- written by -->
                   <div class="space-y-2">
                     <span
                       class="whitespace-nowrap text-xs font-semibold text-md font-regular font-helvetica"
@@ -79,14 +77,6 @@ import FormComponent from '@/components/FormComponent.vue'
           </div>
         </div>
 
-        <!-- spaces -->
-        <div class="px-4 sm:px-6 mx-auto w-full max-w-6xl">
-          <div class="mx-auto w-full max-w-6xl"><div id="header-ad-placement"></div></div>
-        </div>
-        <div class="px-4 sm:px-6">
-          <div class="mx-auto w-full max-w-6xl"><div class="mb-0 lg:mb-16"></div></div>
-        </div>
-
         <!-- bottom part -->
         <div class="px-4 sm:px-6 pt-0">
           <div class="mx-auto w-full max-w-6xl">
@@ -94,7 +84,6 @@ import FormComponent from '@/components/FormComponent.vue'
               <div class="order-last col-span-12 pb-4 pt-2 lg:order-first mb-8">
                 <div>
                   <SearchComponent />
-                  <!-- <PaginationComponent /> -->
                 </div>
               </div>
             </div>

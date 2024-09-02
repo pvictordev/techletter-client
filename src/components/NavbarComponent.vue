@@ -48,7 +48,7 @@ const visible = ref(false)
     <div class="mx-auto w-full max-w-6xl">
       <div class="mx-auto flex items-center justify-between">
         <div class="flex items-center space-x-2">
-          <a class="transition:all px-2 py-1 rounded-md hover:bg-black/10" href="/"
+          <router-link class="transition:all px-2 py-1 rounded-md hover:bg-black/10" to="/"
             ><div class="flex items-center space-x-2">
               <div class="h-8 w-8 overflow-hidden rounded-wt">
                 <figure class="aspect-square relative h-full overflow-hidden w-full">
@@ -59,7 +59,7 @@ const visible = ref(false)
                 class="sm:text-md wt-text-primary hidden text-sm md:block text-md font-regular font-ariel"
                 >Tech Letter</span
               >
-            </div></a
+            </div></router-link
           >
         </div>
         <div class="flex items-center space-x-2">
@@ -90,14 +90,8 @@ const visible = ref(false)
                 >
                   <ul class="flex flex-col gap-1 py-1 px-2">
                     <li class="hover:bg-black/20 rounded-md p-2">
-                      <a class="flex gap-2 items-center" href="/advertise">
-                        <i class="pi pi-share-alt"></i>
-                        Advertise
-                      </a>
-                    </li>
-                    <li class="hover:bg-black/20 rounded-md p-2">
                       <router-link to="/authors" class="flex gap-2 items-center">
-                        <i class="pi pi-user"></i>
+                        <i class="pi pi-users"></i>
                         Authors
                       </router-link>
                     </li>

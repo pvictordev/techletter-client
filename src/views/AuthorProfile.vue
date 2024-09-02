@@ -2,59 +2,22 @@
 import CardComponent from '@/components/PostComponent.vue'
 import cardsData from '@/assets/data.json'
 import { ref } from 'vue'
+import BreadCrumb from '@/components/BreadCrumb.vue'
 
 const cards = ref(cardsData.cards)
+const breadcrumbs = ref([
+  { label: 'Tech Letter', link: '/' },
+  { label: 'Authors', link: '/authors' },
+  { label: 'Victor Purice' }
+])
 </script>
 
 <template>
   <div class="flex min-h-screen flex-col dark:bg-emerald-950 dark:text-white">
     <main class="flex-grow">
       <div class="px-4">
-        <!-- make it reusable  -->
         <div class="mx-auto mt-8 max-w-6xl py-4">
-          <ul class="flex flex-wrap items-center gap-2 text-xs font-semibold">
-            <li class="flex items-center gap-2 text-wt-text-on-background">
-              <router-link to="/" class="opacity-70">Tech Letter</router-link>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke-width="1.5"
-                stroke="currentColor"
-                aria-hidden="true"
-                data-slot="icon"
-                height="14px"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="m8.25 4.5 7.5 7.5-7.5 7.5"
-                ></path>
-              </svg>
-            </li>
-            <li class="flex items-center gap-2 text-wt-text-on-background">
-              <router-link to="/authors" class="opacity-70">Authors</router-link
-              ><svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke-width="1.5"
-                stroke="currentColor"
-                aria-hidden="true"
-                data-slot="icon"
-                height="14px"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="m8.25 4.5 7.5 7.5-7.5 7.5"
-                ></path>
-              </svg>
-            </li>
-            <li class="flex items-center gap-2 text-wt-text-on-background">
-              <span class="opacity-100">Victor Purice</span>
-            </li>
-          </ul>
+          <BreadCrumb :breadcrumbs="breadcrumbs" />
         </div>
 
         <div class="mx-auto flex w-full max-w-6xl pb-16 pt-8">
