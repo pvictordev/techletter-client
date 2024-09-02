@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { defineProps, defineEmits } from 'vue'
 
-const props = defineProps<{
+defineProps<{
   author: {
     id: number
     name: string
@@ -9,12 +9,15 @@ const props = defineProps<{
 }>()
 
 const emit = defineEmits<{ (e: 'click'): void }>()
+const emitClick = () => {
+  emit('click')
+}
 </script>
 
 <template>
   <div class="transparent h-full cursor-pointer border overflow-hidden rounded-2xl flex flex-col">
     <div class="relative w-full article-image">
-      <div @click="$emit('click')">
+      <div @click="emitClick">
         <figure class="relative h-full aspect-social overflow-hidden w-full">
           <img
             width="800"
@@ -27,6 +30,6 @@ const emit = defineEmits<{ (e: 'click'): void }>()
       </div>
     </div>
 
-    <h2 class="p-3 text-xl font-medium">{{ props.author.name }}</h2>
+    <h2 class="p-3 text-xl font-medium">{{ author.name }}</h2>
   </div>
 </template>

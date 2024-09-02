@@ -1,12 +1,12 @@
 <script setup lang="ts">
+import { defineProps, onMounted } from 'vue'
+import { ref, watch } from 'vue'
+
+import BreadCrumb from '@/components/BreadCrumb.vue'
 import CardComponent from '@/components/PostComponent.vue'
 import cardsData from '@/assets/data.json'
-import { ref, watch } from 'vue'
-import BreadCrumb from '@/components/BreadCrumb.vue'
 
 const cards = ref(cardsData.cards)
-
-import { defineProps, onMounted } from 'vue'
 
 const props = defineProps<{
   id: number
@@ -36,6 +36,7 @@ const breadcrumbs = ref([
   { label: 'Authors', link: '/authors' }
 ])
 
+// watching for breadcrumbs array changes
 watch(author, (newAuthor) => {
   if (newAuthor) {
     breadcrumbs.value = [
