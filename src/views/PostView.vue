@@ -153,7 +153,6 @@
 
         <!-- heading -->
         <div class="">
-          <!-- add content -->
           <div class="mx-auto flex max-w-2xl flex-col pb-4">
             <!-- top bar -->
             <div class="mt-8" style="padding-left: 14px; padding-right: 14px">
@@ -259,6 +258,7 @@
                 </div>
               </div>
             </div>
+            <!-- content -->
             <div class="content p-3 flex flex-col gap-3">
               <img
                 src="https://tsh.io/wp-content/uploads/2020/10/vue-new-features-304_.png"
@@ -290,9 +290,10 @@
         </div>
       </div>
 
-      <!-- comments reply -->
+      <!-- bottom part -->
       <div class="px-4"></div>
       <div id="comments" class="space-y-8 px-4">
+        <!-- comments reply -->
         <div class="pb-8">
           <div class="mx-auto max-w-2xl" style="padding-left: 14px; padding-right: 14px">
             <div class="flex items-center justify-between gap-4 py-2">
@@ -366,6 +367,8 @@
             </div>
           </div>
         </div>
+
+        <!-- additional articles -->
         <div class="mx-auto w-full max-w-2xl pb-8" style="padding-left: 14px; padding-right: 14px">
           <h4
             class="pb-6 leading-none sm:pb-2 text-wt-text-on-background text-lg sm:text-xl font-bold"
@@ -374,8 +377,9 @@
           </h4>
           <div class="space-y-6">
             <div class="flex flex-col">
+              <!-- particular article -->
               <a
-                class="group relative flex rounded-wt grid w-full grid-cols-1 transition-all hover:bg-opacity-25 sm:my-6 sm:grid-cols-2 flex-row mb-6 gap-y-0 sm:mb-0 hover:bg-slate-100/50"
+                class="group relative flex rounded-wt w-full grid-cols-1 transition-all hover:bg-opacity-25 sm:my-6 sm:grid-cols-2 flex-row mb-6 gap-y-0 sm:mb-0 hover:bg-slate-100/50"
                 href="/p/googles-search-monopoly-hammer-falls"
                 ><div
                   class="z-10 col-span-1 w-full overflow-hidden rounded-wt border bg-slate-100/50"
@@ -404,71 +408,11 @@
                     class="mb-4 text-wt-text-on-background no-underline opacity-75 wt-header-font text-wt-text-on-background text-xs sm:text-sm font-regular"
                   >
                     <span></span><time datetime="2024-08-07T12:00:00.000Z"></time>
-                  </p></div></a
-              ><a
-                class="group relative flex rounded-wt grid w-full grid-cols-1 transition-all hover:bg-opacity-25 sm:my-6 sm:grid-cols-2 flex-row mb-6 gap-y-0 sm:mb-0 hover:bg-slate-100/50"
-                href="/p/openais-searchgpt-vs-google"
-                ><div
-                  class="z-10 col-span-1 w-full overflow-hidden rounded-wt border bg-slate-100/50"
-                >
-                  <figure class="aspect-social relative h-full overflow-hidden w-full">
-                    <img
-                      loading="lazy"
-                      width="800"
-                      height="421"
-                      src="https://media.beehiiv.com/cdn-cgi/image/format=auto,width=800,height=421,fit=scale-down,onerror=redirect/uploads/asset/file/0bbcaa39-8072-40cc-8ac4-0c0581bbfbbf/gpt.png"
-                      alt="OpenAI's SearchGPT vs Google"
-                      class="absolute inset-0 h-full w-full object-cover"
-                    />
-                  </figure>
-                </div>
-                <div class="z-10 col-span-1 p-4">
-                  <h2
-                    class="line-clamp-2 text-wt-text-on-background wt-header-font text-wt-text-on-background text-md font-bold"
-                  >
-                    OpenAI's SearchGPT vs Google
-                  </h2>
-                  <p
-                    class="font-regular mb-2 text-wt-text-on-background opacity-75 wt-header-font line-clamp-4 text-wt-text-on-background text-sm font-regular"
-                  ></p>
-                  <p
-                    class="mb-4 text-wt-text-on-background no-underline opacity-75 wt-header-font text-wt-text-on-background text-xs sm:text-sm font-regular"
-                  >
-                    <span></span><time datetime="2024-07-29T12:00:00.000Z"></time>
-                  </p></div></a
-              ><a
-                class="group relative flex rounded-wt grid w-full grid-cols-1 transition-all hover:bg-opacity-25 sm:my-6 sm:grid-cols-2 flex-row mb-6 gap-y-0 sm:mb-0 hover:bg-slate-100/50"
-                href="/p/openai-scrutiny-transparency-concerns"
-                ><div
-                  class="z-10 col-span-1 w-full overflow-hidden rounded-wt border bg-slate-100/50"
-                >
-                  <figure class="aspect-social relative h-full overflow-hidden w-full">
-                    <img
-                      loading="lazy"
-                      width="800"
-                      height="421"
-                      src="https://media.beehiiv.com/cdn-cgi/image/format=auto,width=800,height=421,fit=scale-down,onerror=redirect/uploads/asset/file/80c7b0b9-6f35-42ef-b2f2-1d674a53b3be/openai.png"
-                      alt="OpenAI is Under Scrutiny for Transparency Concerns"
-                      class="absolute inset-0 h-full w-full object-cover"
-                    />
-                  </figure>
-                </div>
-                <div class="z-10 col-span-1 p-4">
-                  <h2
-                    class="line-clamp-2 text-wt-text-on-background wt-header-font text-wt-text-on-background text-md font-bold"
-                  >
-                    OpenAI is Under Scrutiny for Transparency Concerns
-                  </h2>
-                  <p
-                    class="font-regular mb-2 text-wt-text-on-background opacity-75 wt-header-font line-clamp-4 text-wt-text-on-background text-sm font-regular"
-                  ></p>
-                  <p
-                    class="mb-4 text-wt-text-on-background no-underline opacity-75 wt-header-font text-wt-text-on-background text-xs sm:text-sm font-regular"
-                  >
-                    <span></span><time datetime="2024-08-05T12:00:00.000Z"></time>
                   </p></div
               ></a>
             </div>
+
+            <!-- view more button -->
             <button
               type="button"
               class="hover flex items-center text-sm text-wt-primary transition-all hover:font-medium"
