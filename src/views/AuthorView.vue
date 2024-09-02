@@ -1,11 +1,40 @@
 <script setup lang="ts">
 import AuthorComponent from '@/components/authors/AuthorComponent.vue'
-import authorsData from '@/assets/data.json'
-import { ref } from 'vue'
+import { ref, onMounted } from 'vue'
 import BreadCrumb from '@/components/BreadCrumb.vue'
+import router from '@/router'
 
-const authors = ref(authorsData.authors)
 const breadcrumbs = ref([{ label: 'Tech Letter', link: '/' }, { label: 'Authors' }])
+
+interface Author {
+  id: number
+  name: string
+}
+
+const authors = ref<Author[]>([])
+
+const fetchAuthors = async () => {
+  try {
+    const response = await fetch(`https://jsonplaceholder.typicode.com/users`)
+    if (!response.ok) {
+      throw new Error('Failed to fetch author data')
+    }
+    const userData = await response.json()
+
+    authors.value = userData.slice(0, 3).map((user: any) => ({
+      id: user.id,
+      name: user.name
+    }))
+  } catch (error) {
+    console.error(error)
+  }
+}
+
+onMounted(fetchAuthors)
+
+const goToProfile = (id: number) => {
+  router.push({ name: 'AuthorProfile', params: { id } })
+}
 </script>
 
 <template>
@@ -27,7 +56,12 @@ const breadcrumbs = ref([{ label: 'Tech Letter', link: '/' }, { label: 'Authors'
             <!-- authors grid -->
             <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-3">
               <!-- author component -->
-              <AuthorComponent v-for="author in authors" :key="author.id" :author="author" />
+              <AuthorComponent
+                v-for="author in authors"
+                :key="author.id"
+                @click="goToProfile(author.id)"
+                :author="author"
+              />
             </div>
           </div>
         </div>

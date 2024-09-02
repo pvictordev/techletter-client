@@ -1,5 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
+import AuthorProfile from '@/views/AuthorProfile.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -19,8 +20,9 @@ const router = createRouter({
     },
     {
       path: '/authors/:id',
-      name: 'author-name',
-      component: () => import('../views/AuthorProfile.vue')
+      name: 'AuthorProfile',
+      component: AuthorProfile,
+      props: true
     },
     {
       path: '/posts/:id',
