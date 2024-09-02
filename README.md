@@ -1,39 +1,48 @@
-# newsletter-client
+# Tech Letter Client
 
-This template should help get you started developing with Vue 3 in Vite.
+This project is a client application of the Tech Letter platform.
 
-## Recommended IDE Setup
+## Stack
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+- **Vue 3**: Framework for building user interfaces and single-page applications.
+- **Pinia**: A state management library for Vue.js.
+- **PrimeVue**: A comprehensive UI component library for Vue.js, offering a wide range of components and themes to enhance the user interface.
 
-## Type Support for `.vue` Imports in TS
+## What I Learned
 
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) to make the TypeScript language service aware of `.vue` types.
+### Composition API & Options API
 
-## Customize configuration
+- **Composition API**: Introduced the Composition API, which allows for more flexible and reusable logic by using functions like `setup()`, `ref()`, and `reactive()`.
+- **Options API**: Compared the Composition API with the traditional Options API, which uses options like `data`, `methods`, and `computed` to define component logic.
 
-See [Vite Configuration Reference](https://vitejs.dev/config/).
+### Conditional Rendering using Directives
 
-## Project Setup
+- **Directives**: Gained experience in using directives such as `v-if`, `v-else-if`, and `v-else` for conditional rendering of content in the template.
+- **Event Handling**: Learned to use the `v-on` directive to listen for and handle DOM events.
+- **Data Binding**: Learned to use `v-bind` for dynamic attribute binding and `v-model` for two-way data binding in forms.
 
-```sh
-npm install
-```
+### Reactive Values: `ref()` & `reactive()`
 
-### Compile and Hot-Reload for Development
+- **`ref()`**: Understood the purpose and use case of `ref()` for creating reactive primitives that can be used in the template and component logic.
+- **`reactive()`**: Learned about `reactive()` for creating reactive objects.
 
-```sh
-npm run dev
-```
+### `computed()` Function
 
-### Type-Check, Compile and Minify for Production
+- **Computed Properties**: Learned about the `computed()` function to create computed properties that depend on reactive state.
 
-```sh
-npm run build
-```
+### Lifecycle Hooks
 
-### Lint with [ESLint](https://eslint.org/)
+- **Lifecycle Hooks**: Learned about Vue's lifecycle hooks such as `onMounted()`, `onUpdated()`, and `onUnmounted()` to run code at specific points in a component's lifecycle.
 
-```sh
-npm run lint
-```
+### Vue Router
+
+- **Routing**: Learned to use Vue Router to manage navigation and routing between different views or pages within a SPA.
+
+### Pinia State Management
+
+- **Pinia Basics**: Learned basic of Pinia for state management, including creating stores, managing state across the application.
+
+### PrimeVue & Vue Icon Library
+
+- **PrimeVue Components**: Used PrimeVue components like toast notifications, dialogs, and various UI elements to enhance the application's user interface.
+- **Vue Icons**: Implemented icons from Vue Icon Libraries to add visual elements and improve the overall design and usability of the application.
