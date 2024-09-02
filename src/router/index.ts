@@ -27,7 +27,10 @@ const router = createRouter({
       name: 'post-title',
       component: () => import('../views/PostView.vue')
     }
-  ]
+  ],
+  scrollBehavior(to, from, savedPosition) {
+    return { top: 0 }
+  }
 })
 
 export default router
