@@ -45,13 +45,13 @@ const visible = ref(false)
   <nav
     class="px-4 fixed sm:px-6 w-full bg-white z-20 transform transition-transform duration-500 ease-in-out py-2 dark:bg-emerald-950 dark:text-white"
   >
-    <div class="mx-auto w-full max-w-6xl">
+    <div class="mx-auto max-w-6xl">
       <div class="mx-auto flex items-center justify-between">
         <div class="flex items-center space-x-2">
           <router-link class="transition:all px-2 py-1 rounded-md hover:bg-black/10" to="/"
             ><div class="flex items-center space-x-2">
               <div class="h-8 w-8 overflow-hidden rounded-wt">
-                <figure class="aspect-square relative h-full overflow-hidden w-full">
+                <figure class="aspect-square relative h-full overflow-hidden">
                   <TechIcon size="w-8 h-8" />
                 </figure>
               </div>
@@ -65,7 +65,7 @@ const visible = ref(false)
         <div class="flex items-center space-x-2">
           <div class="flex items-center space-x-2">
             <button
-              class="border inline-flex items-center py-2 px-4 rounded-md transition-all transition-300 hover:bg-white/10"
+              class="border inline-flex items-center py-2 px-4 rounded-md transition-all transition-300 dark:hover:bg-white/10 hover:bg-black/10"
             >
               Login
             </button>

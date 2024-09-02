@@ -17,7 +17,7 @@ const breadcrumbs = ref([
     <div>
       <div class="sticky top-0 z-50 w-full">
         <div class="relative overflow-hidden h-1.5 bg-transparent w-full">
-          <div class="h-full w-full bg-wt-primary"></div>
+          <div class="h-full bg-wt-primary"></div>
         </div>
       </div>
 
@@ -46,10 +46,8 @@ const breadcrumbs = ref([
                           <!-- profile pic -->
                           <img
                             alt="Author"
-                            height="40"
-                            class="w-12 h-12 rounded-full bg-cover"
+                            class="w-12 h-12 rounded-full bg-cover object-cover"
                             src="https://upload.wikimedia.org/wikipedia/commons/0/06/Ryan_Gosling_-_Cannes_Film_Festival_-_02.jpg"
-                            width="40"
                           />
                         </div>
                         <div class="flex items-center gap-2">
@@ -110,7 +108,7 @@ const breadcrumbs = ref([
         <CommentsReply />
 
         <!-- additional articles -->
-        <div class="mx-auto w-full max-w-2xl pb-8" style="padding-left: 14px; padding-right: 14px">
+        <div class="mx-auto max-w-2xl pb-8 px-3">
           <h4
             class="pb-6 leading-none sm:pb-2 text-wt-text-on-background text-lg sm:text-xl font-bold"
           >

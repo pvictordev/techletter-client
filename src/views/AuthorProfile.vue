@@ -20,11 +20,11 @@ const breadcrumbs = ref([
           <BreadCrumb :breadcrumbs="breadcrumbs" />
         </div>
 
-        <div class="mx-auto flex w-full max-w-6xl pb-16 pt-8">
-          <div class="flex w-full flex-col space-y-10">
+        <div class="mx-auto flex max-w-6xl pb-16 pt-8">
+          <div class="flex flex-col space-y-10">
             <div>
               <div
-                class="flex w-full flex-col items-center space-x-0 space-y-8 sm:flex-row sm:space-x-8 sm:space-y-0"
+                class="flex flex-col items-center space-x-0 space-y-8 sm:flex-row sm:space-x-8 sm:space-y-0"
               >
                 <div>
                   <div
@@ -33,8 +33,6 @@ const breadcrumbs = ref([
                     <figure class="aspect-social relative h-full overflow-hidden w-full">
                       <img
                         loading="lazy"
-                        width="400"
-                        height="211"
                         src="https://upload.wikimedia.org/wikipedia/commons/0/06/Ryan_Gosling_-_Cannes_Film_Festival_-_02.jpg"
                         alt="Victor Purice"
                         class="absolute inset-0 h-full w-full object-cover"
@@ -42,14 +40,14 @@ const breadcrumbs = ref([
                     </figure>
                   </div>
                 </div>
-                <div class="w-full max-w-2xl space-y-1">
+                <div class="max-w-2xl space-y-1">
                   <h1
-                    class="w-full text-center font-semibold text-wt-text-on-background sm:text-left text-2xl sm:text-3xl font-regular"
+                    class="text-center font-semibold text-wt-text-on-background sm:text-left text-2xl sm:text-3xl font-regular"
                   >
                     Victor Purice
                   </h1>
                   <p
-                    class="w-full text-center text-wt-text-on-background sm:text-left wt-body-font text-gray-700 text-md font-regular"
+                    class="text-center text-wt-text-on-background sm:text-left wt-body-font text-gray-700 text-md font-regular"
                   ></p>
                   <div class="pt-4 sm:pt-2">
                     <div class="flex justify-center space-x-2 sm:justify-start"></div>
@@ -64,7 +62,7 @@ const breadcrumbs = ref([
               <CardComponent v-for="card in cards" :key="card.id" :card="card" />
             </div>
 
-            <div class="mt-6 flex w-full justify-center">
+            <div class="mt-6 flex justify-center">
               <button
                 class="border font-medium shadow-sm wt-button-font inline-flex items-center disabled:cursor-not-allowed focus:outline-none focus:ring-2 focus:ring-offset-2 justify-center rounded-wt px-4 py-2 text-sm transition-all group-hover:brightness-110"
               >

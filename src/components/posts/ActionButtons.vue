@@ -8,7 +8,7 @@
       class="absolute left-0 top-0 w-full border border-t border-wt-text-on-background opacity-10 md:hidden"
     ></div>
 
-    <div class="mx-auto w-full max-w-6xl px-0 lg:px-4">
+    <div class="mx-auto max-w-6xl px-0 lg:px-4">
       <div class="flex flex-col gap-8 md:h-40">
         <div>
           <!-- action box -->

@@ -15,7 +15,7 @@ defineProps<{
   <div class="transparent h-full cursor-pointer overflow-hidden rounded-2xl flex flex-col border">
     <div class="relative w-full article-image">
       <router-link to="/posts/:id" class="">
-        <div class="w-full">
+        <div>
           <figure class="relative h-full aspect-social overflow-hidden w-full">
             <img
               loading="lazy"
@@ -23,14 +23,14 @@ defineProps<{
               height="421"
               :src="card.image"
               alt="article image"
-              class="inset-0 h-full w-full object-cover"
+              class="inset-0 h-full object-cover"
             />
           </figure>
         </div>
       </router-link>
     </div>
 
-    <div class="w-full p-3">
+    <div class="p-3">
       <div class="space-y-3">
         <a class="top" href="/">
           <div class="space-y-2">

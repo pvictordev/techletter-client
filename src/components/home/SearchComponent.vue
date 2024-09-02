@@ -103,7 +103,7 @@ const clearFilter = () => {
   <!-- No results message -->
   <p
     v-if="!loading && filteredCards.length === 0"
-    class="mt-12 flex w-full flex-col items-center justify-center gap-4"
+    class="mt-12 flex flex-col items-center justify-center gap-4"
   >
     <i class="pi pi-search"></i>
     No Posts Found

@@ -9,7 +9,7 @@
           <div class="relative inline-block text-left" data-headlessui-state="">
             <div>
               <button
-                class="inline-flex w-full justify-center border px-4 py-1 text-sm font-medium"
+                class="inline-flex justify-center border px-4 py-1 text-sm font-medium"
                 type="button"
                 aria-haspopup="menu"
                 aria-expanded="false"
@@ -32,7 +32,7 @@
               rows="2"
               name="content"
               id="comment"
-              class="block w-full resize-none border-0 bg-transparent py-3 text-sm focus:ring-0"
+              class="block resize-none border-0 bg-transparent p-3 focus:outline-none text-sm focus:ring-0"
               placeholder="Add your comment..."
             ></textarea>
             <div class="py-2" aria-hidden="true">
@@ -46,7 +46,7 @@
                 type="button"
                 class="border font-medium shadow-sm wt-button-font inline-flex items-center disabled:bg-gray-400 disabled:cursor-not-allowed focus:outline-none focus:ring-2 focus:ring-offset-2 justify-center transition-colors rounded-wt px-2 py-1 text-sm border-wt-primary text-wt-text-on-primary bg-wt-primary disabled:border-gray-500 focus:ring-wt-primary"
               >
-                Login
+                Send
               </button>
             </div>
           </div>
