@@ -1,4 +1,14 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import { ref } from 'vue'
+
+let countLikes = ref<number>(0)
+const incrementLikes = () => {
+  countLikes.value++
+}
+const decrementLikes = () => {
+  countLikes.value--
+}
+</script>
 
 <template>
   <div
@@ -16,11 +26,12 @@
             <!-- action button -->
             <div class="flex items-center justify-center gap-3 md:flex-col md:items-start md:gap-1">
               <button class="group" type="button">
-                <div
+                <a
+                  href="#top"
                   class="flex items-center hover:bg-black/10 dark:hover:bg-white/10 rounded-full p-1 gap-2"
                 >
-                  <i class="pi pi-arrow-left p-2"></i>
-                </div>
+                  <i class="pi pi-arrow-left p-3"></i>
+                </a>
               </button>
             </div>
 
@@ -28,10 +39,18 @@
             <div class="flex items-center justify-center gap-3 md:flex-col md:items-start md:gap-1">
               <button class="group" type="button">
                 <div
-                  class="flex items-center hover:bg-black/10 dark:hover:bg-white/10 rounded-full p-1 gap-1"
+                  class="flex relative items-center hover:bg-black/10 dark:hover:bg-white/10 rounded-full p-1"
                 >
-                  <i class="pi pi-heart p-2"></i>
-                  <span class="text-sm font-medium group-hover:opacity-100">1</span>
+                  <i
+                    @click="decrementLikes()"
+                    v-if="countLikes > 0"
+                    class="pi pi-heart-fill p-3"
+                  ></i>
+                  <i @click="incrementLikes()" v-else class="pi pi-heart p-3"></i>
+                  <span
+                    class="text-sm top-1 right-2 absolute font-medium group-hover:opacity-100"
+                    >{{ countLikes }}</span
+                  >
                 </div>
               </button>
 
@@ -39,7 +58,7 @@
                 <div
                   class="flex items-center hover:bg-black/10 dark:hover:bg-white/10 rounded-full p-1 gap-2"
                 >
-                  <i class="pi pi-comments p-2"></i>
+                  <i class="pi pi-comments p-3"></i>
                 </div>
               </a>
 
@@ -47,7 +66,7 @@
                 <div
                   class="flex items-center hover:bg-black/10 dark:hover:bg-white/10 rounded-full p-1 gap-2"
                 >
-                  <i class="pi pi-share-alt p-2"></i>
+                  <i class="pi pi-share-alt p-3"></i>
                 </div>
               </button>
             </div>

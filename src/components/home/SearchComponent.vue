@@ -80,7 +80,7 @@ const clearFilter = () => {
   <!-- skeleton -->
   <div
     v-if="loading && searchQuery !== ''"
-    class="rounded border mb-3 border-surface-200 dark:border-surface-700 p-6 bg-surface-0 dark:bg-surface-900"
+    class="rounded-xl border mb-3 border-surface-200 dark:border-surface-700 p-6 bg-surface-0 dark:bg-surface-900"
   >
     <div class="flex mb-4">
       <Skeleton shape="circle" size="4rem" class="mr-2"></Skeleton>
