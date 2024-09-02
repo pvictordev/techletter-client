@@ -1,15 +1,53 @@
 <script setup lang="ts">
 import CardComponent from '@/components/PostComponent.vue'
 import cardsData from '@/assets/data.json'
-import { ref } from 'vue'
+import { ref, watch } from 'vue'
 import BreadCrumb from '@/components/BreadCrumb.vue'
 
 const cards = ref(cardsData.cards)
+
+import { defineProps, onMounted } from 'vue'
+
+const props = defineProps<{
+  id: number
+}>()
+
+const author = ref<{
+  id: number
+  name: string
+} | null>(null)
+
+const fetchAuthorDetails = async () => {
+  try {
+    const response = await fetch(`https://jsonplaceholder.typicode.com/users/${props.id}`)
+    if (!response.ok) {
+      throw new Error('Failed to fetch author details')
+    }
+    author.value = await response.json()
+  } catch (error) {
+    console.error(error)
+  }
+}
+
+onMounted(fetchAuthorDetails)
+
 const breadcrumbs = ref([
   { label: 'Tech Letter', link: '/' },
-  { label: 'Authors', link: '/authors' },
-  { label: 'Victor Purice' }
+  { label: 'Authors', link: '/authors' }
 ])
+
+watch(author, (newAuthor) => {
+  if (newAuthor) {
+    breadcrumbs.value = [
+      { label: 'Tech Letter', link: '/' },
+      { label: 'Authors', link: '/authors' },
+      {
+        label: newAuthor.name,
+        link: ''
+      }
+    ]
+  }
+})
 </script>
 
 <template>
@@ -42,9 +80,10 @@ const breadcrumbs = ref([
                 </div>
                 <div class="max-w-2xl space-y-1">
                   <h1
+                    v-if="author"
                     class="text-center font-semibold text-wt-text-on-background sm:text-left text-2xl sm:text-3xl font-regular"
                   >
-                    Victor Purice
+                    {{ author.name }}
                   </h1>
                   <p
                     class="text-center text-wt-text-on-background sm:text-left wt-body-font text-gray-700 text-md font-regular"
