@@ -26,7 +26,7 @@ if (!isValidBreadcrumb(props.breadcrumbs)) {
         <i class="opacity-70 pi pi-angle-right"></i>
       </span>
 
-      <span v-else :class="{ '!opacity-100': crumb.isCurrent }">
+      <span v-else :class="{ 'opacity-100': crumb.isCurrent }">
         {{ crumb.label }}
       </span>
     </li>

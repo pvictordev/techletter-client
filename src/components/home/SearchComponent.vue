@@ -64,7 +64,7 @@ const clearFilter = () => {
   <!-- search -->
   <div class="mb-5">
     <div class="relative w-full pb-4">
-      <div class="group relative w-full transition-all">
+      <div class="relative w-full transition-all">
         <i class="pi pi-search absolute left-2 top-1/2 -translate-y-1/2 transform"></i>
         <input
           id="search-input"

@@ -24,7 +24,7 @@ const toggleMenu = () => {
 }
 
 const handleClickOutside = (event: MouseEvent) => {
-  const menuElement = document.getElementById('headlessui-menu-button-:Rd5al:')
+  const menuElement = document.getElementById('burger-icon')
   if (menuElement && !menuElement.contains(event.target as Node)) {
     isMenuVisible.value = false
   }
@@ -42,14 +42,13 @@ const visible = ref(false)
 </script>
 
 <template>
-  <nav
-    class="px-4 fixed sm:px-6 w-full bg-white z-20 transform transition-transform duration-500 ease-in-out py-2 dark:bg-emerald-950 dark:text-white"
-  >
+  <nav class="px-4 fixed sm:px-6 w-full bg-white z-20 py-2 dark:bg-emerald-950 dark:text-white">
     <div class="mx-auto max-w-6xl">
       <div class="mx-auto flex items-center justify-between">
         <div class="flex items-center space-x-2">
-          <router-link class="transition:all px-2 py-1 rounded-md hover:bg-black/10" to="/"
-            ><div class="flex items-center space-x-2">
+          <!-- techletter icon -->
+          <router-link class="px-2 py-1 rounded-md hover:bg-black/10" to="/">
+            <div class="flex items-center space-x-2">
               <div class="h-8 w-8 overflow-hidden rounded-wt">
                 <figure class="aspect-square relative h-full overflow-hidden">
                   <TechIcon size="w-8 h-8" />
@@ -57,34 +56,32 @@ const visible = ref(false)
               </div>
               <span
                 class="sm:text-md wt-text-primary hidden text-sm md:block text-md font-regular font-ariel"
-                >Tech Letter</span
               >
-            </div></router-link
-          >
+                Tech Letter
+              </span>
+            </div>
+          </router-link>
         </div>
+
         <div class="flex items-center space-x-2">
+          <!-- login & subscribe  -->
           <div class="flex items-center space-x-2">
             <button
-              class="border inline-flex items-center py-2 px-4 rounded-md transition-all transition-300 dark:hover:bg-white/10 hover:bg-black/10"
+              class="border inline-flex items-center py-2 px-4 rounded-md dark:hover:bg-white/10 hover:bg-black/10"
             >
               Login
             </button>
             <button
               @click="visible = true"
-              class="border text-white inline-flex items-center py-2 px-4 transition-all transition-300 rounded-md bg-primary hover:bg-emerald-600"
+              class="border text-white inline-flex items-center py-2 px-4 rounded-md bg-primary hover:bg-emerald-600"
             >
               Subscribe
             </button>
           </div>
+
+          <!-- burger -->
           <div class="relative text-left">
-            <button
-              aria-label="Menu"
-              class="rounded-full transition-all"
-              id="headlessui-menu-button-:Rd5al:"
-              type="button"
-              aria-haspopup="menu"
-              aria-expanded="false"
-            >
+            <button id="burger-icon">
               <div
                 @click="toggleMenu"
                 class="relative mt-1.5 rounded dark:hover:bg-white/10 hover:bg-black/10"

@@ -21,7 +21,7 @@ const fetchAuthors = async () => {
     }
     const userData = await response.json()
 
-    authors.value = userData.slice(0, 3).map((user: any) => ({
+    authors.value = userData.slice(0, 4).map((user: Author) => ({
       id: user.id,
       name: user.name
     }))

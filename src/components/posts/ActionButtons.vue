@@ -4,9 +4,7 @@
   <div
     class="fixed bottom-0 left-0 top-auto z-20 w-full rounded shadow-xl transition-all duration-300 ease-in-out md:bottom-auto md:z-auto md:w-fit md:border-none md:shadow-none opacity-100 md:top-20"
   >
-    <div
-      class="absolute left-0 top-0 w-full border border-t border-wt-text-on-background opacity-10 md:hidden"
-    ></div>
+    <div class="absolute left-0 top-0 w-full border border-t md:hidden"></div>
 
     <div class="mx-auto max-w-6xl px-0 lg:px-4">
       <div class="flex flex-col gap-8 md:h-40">

@@ -10,8 +10,6 @@
         <figure class="aspect-social relative h-full overflow-hidden w-full">
           <img
             loading="lazy"
-            width="800"
-            height="421"
             src="https://media.beehiiv.com/cdn-cgi/image/format=auto,width=800,height=421,fit=scale-down,onerror=redirect/uploads/asset/file/5a99538a-d9b7-41d3-9ee1-dd6667d27ca8/google.png"
             alt="Google's Search Monopoly: The Hammer Falls"
             class="absolute inset-0 h-full w-full object-cover"
@@ -19,17 +17,9 @@
         </figure>
       </div>
       <div class="z-10 col-span-1 p-4">
-        <h2
-          class="line-clamp-2 text-wt-text-on-background wt-header-font text-wt-text-on-background text-md font-bold"
-        >
-          Google's Search Monopoly: The Hammer Falls
-        </h2>
-        <p
-          class="font-regular mb-2 text-wt-text-on-background opacity-75 wt-header-font line-clamp-4 text-wt-text-on-background text-sm font-regular"
-        ></p>
-        <p
-          class="mb-4 text-wt-text-on-background no-underline opacity-75 wt-header-font text-wt-text-on-background text-xs sm:text-sm font-regular"
-        >
+        <h2 class="line-clamp-2 text-md font-bold">Google's Search Monopoly: The Hammer Falls</h2>
+        <p class="font-regular mb-2 opacity-75 line-clamp-4 text-sm font-regular"></p>
+        <p class="mb-4 no-underline opacity-75 text-xs sm:text-sm font-regular">
           <span></span><time datetime="2024-08-07T12:00:00.000Z"></time>
         </p>
       </div>

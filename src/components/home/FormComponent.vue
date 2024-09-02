@@ -25,7 +25,7 @@ const { email, handleSubmit } = toastComposable()
 
         <!-- input button -->
         <input
-          class="cursor-pointer bg-primary text-white px-5 py-3 font-semibold w-full sm:w-auto text-lg focus:text-lg active:text-lg sm:text-lg rounded-lg sm:rounded-lg-r"
+          class="cursor-pointer bg-primary hover:bg-emerald-700 text-white px-5 py-3 font-semibold w-full sm:w-auto text-lg focus:text-lg active:text-lg sm:text-lg rounded-lg sm:rounded-lg-r"
           type="submit"
           value="Subscribe"
         />

@@ -69,7 +69,7 @@ watch(author, (newAuthor) => {
                   <div
                     class="z-10 col-span-1 h-40 min-h-40 w-40 min-w-40 overflow-hidden rounded-full"
                   >
-                    <figure class="aspect-social relative h-full overflow-hidden w-full">
+                    <figure class="relative h-full overflow-hidden w-full">
                       <img
                         loading="lazy"
                         src="https://upload.wikimedia.org/wikipedia/commons/0/06/Ryan_Gosling_-_Cannes_Film_Festival_-_02.jpg"
@@ -82,13 +82,11 @@ watch(author, (newAuthor) => {
                 <div class="max-w-2xl space-y-1">
                   <h1
                     v-if="author"
-                    class="text-center font-semibold text-wt-text-on-background sm:text-left text-2xl sm:text-3xl font-regular"
+                    class="text-center font-semibold sm:text-left text-2xl sm:text-3xl"
                   >
                     {{ author.name }}
                   </h1>
-                  <p
-                    class="text-center text-wt-text-on-background sm:text-left wt-body-font text-gray-700 text-md font-regular"
-                  ></p>
+                  <p class="text-center sm:text-left wt-body-font text-gray-700 text-md"></p>
                   <div class="pt-4 sm:pt-2">
                     <div class="flex justify-center space-x-2 sm:justify-start"></div>
                   </div>
@@ -104,7 +102,7 @@ watch(author, (newAuthor) => {
 
             <div class="mt-6 flex justify-center">
               <button
-                class="border font-medium shadow-sm wt-button-font inline-flex items-center disabled:cursor-not-allowed focus:outline-none focus:ring-2 focus:ring-offset-2 justify-center rounded-wt px-4 py-2 text-sm transition-all group-hover:brightness-110"
+                class="border font-medium shadow-sm inline-flex items-center justify-center px-4 py-2 text-sm"
               >
                 Load More
               </button>

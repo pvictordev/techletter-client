@@ -17,7 +17,7 @@ const breadcrumbs = ref([
     <div>
       <div class="sticky top-0 z-50 w-full">
         <div class="relative overflow-hidden h-1.5 bg-transparent w-full">
-          <div class="h-full bg-wt-primary"></div>
+          <div class="h-full"></div>
         </div>
       </div>
 
@@ -25,7 +25,7 @@ const breadcrumbs = ref([
         <!-- actions buttons -->
         <ActionButtons />
         <!-- heading -->
-        <div class="">
+        <div>
           <div class="mx-auto flex max-w-2xl flex-col pb-4">
             <!-- breadcrumb nav -->
             <div class="mt-8 mb-6 px-3">
@@ -34,7 +34,7 @@ const breadcrumbs = ref([
 
             <!-- top part -->
             <div class="flex">
-              <div class="web-header pt-0 p-3">
+              <div class="pt-0 p-3">
                 <h1 class="text-4xl pb-8 font-bold">
                   Telegram's CEO Arrested: What You Need to Know
                 </h1>
@@ -72,6 +72,7 @@ const breadcrumbs = ref([
             <!-- content -->
             <div class="content p-3 flex flex-col gap-3">
               <img
+                class="rounded-lg"
                 src="https://tsh.io/wp-content/uploads/2020/10/vue-new-features-304_.png"
                 alt=""
               />
@@ -84,17 +85,11 @@ const breadcrumbs = ref([
                 laboriosam minus eius perferendis ipsa pariatur alias voluptates voluptate
                 consectetur! Excepturi fugit iste, in, officiis accusamus nesciunt maiores unde
                 adipisci quam quibusdam ipsam nam. Esse similique praesentium sunt in, odio,
-                mollitia voluptatibus tenetur natus ab, velit possimus totam? Assumenda excepturi
-                impedit totam, quidem dolor natus quas placeat quasi! Praesentium excepturi sed hic
-                officiis laudantium eligendi provident, ut sequi quod necessitatibus autem adipisci
-                tempore. Cumque eius ut mollitia. Voluptate exercitationem nisi omnis! Itaque,
-                nesciunt nulla fugiat hic, esse a tempora maxime rerum dolorum eos ut quod velit
-                optio recusandae voluptatibus deserunt sunt soluta natus suscipit? Quod ut quidem
-                minima ipsam eveniet fugit repellat, iste quos saepe dolores nesciunt numquam itaque
-                optio? Ut rem beatae et tempore, debitis modi, cumque magnam soluta cupiditate
-                voluptas doloribus, porro assumenda commodi quae ea fuga officia voluptatum dolore!
-                Excepturi nisi voluptate aut, amet illum error molestias in dolore deleniti
-                obcaecati quas ad.
+                mollitia voluptatibus tenetur natus ab. Excepturi fugit iste, in, officiis accusamus
+                nesciunt maiores unde adipisci quam quibusdam ipsam nam. Esse similique praesentium
+                sunt in, odio, mollitia voluptatibus tenetur natus ab. Excepturi fugit iste, in,
+                officiis accusamus nesciunt maiores unde adipisci quam quibusdam ipsam nam. Esse
+                similique praesentium sunt in, odio, mollitia voluptatibus tenetur natus ab.
               </p>
             </div>
           </div>
@@ -109,11 +104,7 @@ const breadcrumbs = ref([
 
         <!-- additional articles -->
         <div class="mx-auto max-w-2xl pb-8 px-3">
-          <h4
-            class="pb-6 leading-none sm:pb-2 text-wt-text-on-background text-lg sm:text-xl font-bold"
-          >
-            Keep reading
-          </h4>
+          <h4 class="pb-6 sm:pb-2 text-lg sm:text-xl font-bold">Keep reading</h4>
           <div class="space-y-6">
             <!-- particular article -->
             <ArticleComponent />
@@ -121,7 +112,7 @@ const breadcrumbs = ref([
             <!-- view more button -->
             <button
               type="button"
-              class="hover flex items-center text-sm text-wt-primary transition-all hover:font-medium"
+              class="flex items-center text-sm transition-all hover:font-medium"
             >
               <span>View more <i class="pi pi-arrow-right"></i></span>
             </button>

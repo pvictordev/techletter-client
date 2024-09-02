@@ -81,7 +81,7 @@ import FormComponent from '@/components/home/FormComponent.vue'
         <div class="px-4 sm:px-6 pt-0">
           <div class="mx-auto max-w-6xl">
             <div class="grid grid-cols-12">
-              <div class="order-last col-span-12 pb-4 pt-2 lg:order-first mb-8">
+              <div class="order-last col-span-12 pb-4 pt-2 lg:order-first mb-14">
                 <div>
                   <SearchComponent />
                 </div>
