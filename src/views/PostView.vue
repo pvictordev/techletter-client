@@ -13,7 +13,8 @@ const breadcrumbs = ref([
 </script>
 
 <template>
-  <main id="top" class="flex-grow dark:bg-emerald-950 dark:text-white">
+  <span id="top"></span>
+  <main class="flex-grow dark:bg-emerald-950 dark:text-white">
     <div>
       <div class="sticky top-0 z-50 w-full">
         <div class="relative overflow-hidden h-1.5 bg-transparent w-full">

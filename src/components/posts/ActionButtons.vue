@@ -8,6 +8,21 @@ const incrementLikes = () => {
 const decrementLikes = () => {
   countLikes.value--
 }
+const scrollToSection = (id) => {
+  const element = document.getElementById(id)
+  if (element) {
+    const offset = 64
+    const bodyRect = document.body.getBoundingClientRect().top
+    const elementRect = element.getBoundingClientRect().top
+    const elementPosition = elementRect - bodyRect
+    const offsetPosition = elementPosition - offset
+
+    window.scrollTo({
+      top: offsetPosition,
+      behavior: 'smooth'
+    })
+  }
+}
 </script>
 
 <template>
@@ -27,6 +42,7 @@ const decrementLikes = () => {
             <div class="flex items-center justify-center gap-3 md:flex-col md:items-start md:gap-1">
               <button class="group" type="button">
                 <a
+                  @click.prevent="scrollToSection('top')"
                   href="#top"
                   class="flex items-center hover:bg-black/10 dark:hover:bg-white/10 rounded-full p-1 gap-2"
                 >
@@ -54,7 +70,12 @@ const decrementLikes = () => {
                 </div>
               </button>
 
-              <a href="#reply" class="group" type="button">
+              <a
+                @click.prevent="scrollToSection('reply')"
+                href="#reply"
+                class="group"
+                type="button"
+              >
                 <div
                   class="flex items-center hover:bg-black/10 dark:hover:bg-white/10 rounded-full p-1 gap-2"
                 >
