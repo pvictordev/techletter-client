@@ -16,13 +16,8 @@ defineProps<{
     <div class="transparent h-full cursor-pointer overflow-hidden rounded-2xl flex flex-col border">
       <div class="relative w-full">
         <div>
-          <figure class="relative h-full overflow-hidden w-full">
-            <img
-              loading="lazy"
-              :src="card.image"
-              alt="article image"
-              class="inset-0 h-full object-cover"
-            />
+          <figure class="relative min-h-48 h-full overflow-hidden w-full">
+            <img loading="lazy" :src="card.image" alt="article image" class="h-full object-cover" />
           </figure>
         </div>
       </div>
