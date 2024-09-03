@@ -7,6 +7,7 @@ This project is a client application of the Tech Letter platform.
 - **Vue 3**: Framework for building user interfaces and single-page applications.
 - **Pinia**: A state management library for Vue.js.
 - **PrimeVue**: A comprehensive UI component library for Vue.js, offering a wide range of components and themes to enhance the user interface.
+- **Playwright**: End-to-end testing for modern web apps.
 
 ## What I Learned
 

@@ -31,7 +31,11 @@ const router = createRouter({
     }
   ],
   scrollBehavior(to, from, savedPosition) {
-    return { top: 0 }
+    if (savedPosition) {
+      return savedPosition
+    } else {
+      return { left: 0, top: 0, behavior: 'auto' }
+    }
   }
 })
 

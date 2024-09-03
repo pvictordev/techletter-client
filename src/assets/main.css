@@ -5,3 +5,6 @@
 .transition-default {
   @apply transition-all duration-100 ease-in-out;
 }
+html {
+  scroll-behavior: smooth;
+}

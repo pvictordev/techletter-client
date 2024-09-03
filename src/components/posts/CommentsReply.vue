@@ -1,6 +1,6 @@
 <script setup lang="ts"></script>
 <template>
-  <div id="reply" class="pb-5"></div>
+  <span id="reply"></span>
   <div class="pb-8">
     <div class="mx-auto max-w-2xl px-3">
       <div class="flex items-center justify-between gap-4 py-2">
