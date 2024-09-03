@@ -5,17 +5,9 @@ interface Breadcrumb {
   isCurrent?: boolean
 }
 
-const props = defineProps<{
+defineProps<{
   breadcrumbs: Breadcrumb[]
 }>()
-
-const isValidBreadcrumb = (value: Breadcrumb[]): boolean => {
-  return value.every((crumb) => 'label' in crumb && ('link' in crumb || 'isCurrent' in crumb))
-}
-
-if (!isValidBreadcrumb(props.breadcrumbs)) {
-  console.error('Invalid breadcrumb structure.')
-}
 </script>
 
 <template>

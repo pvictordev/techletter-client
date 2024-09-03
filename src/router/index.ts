@@ -22,7 +22,7 @@ const router = createRouter({
       path: '/authors/:id',
       name: 'AuthorProfile',
       component: AuthorProfile,
-      props: true
+      props: (route) => ({ id: Number(route.params.id) })
     },
     {
       path: '/posts/:id',
