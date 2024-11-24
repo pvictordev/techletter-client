@@ -77,25 +77,74 @@ const clearFilter = () => {
       </div>
     </div>
   </div>
+
+  <!-- loading && searchQuery !== '' -->
   <!-- skeleton -->
   <div
     v-if="loading && searchQuery !== ''"
-    class="rounded-xl border mb-3 border-surface-200 dark:border-surface-700 p-6 bg-surface-0 dark:bg-surface-900"
+    class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3"
   >
-    <div class="flex mb-4">
-      <Skeleton shape="circle" size="4rem" class="mr-2"></Skeleton>
-      <div>
-        <Skeleton width="10rem" class="mb-2"></Skeleton>
-        <Skeleton width="5rem" class="mb-2"></Skeleton>
-        <Skeleton height=".5rem"></Skeleton>
+    <div
+      class="rounded-xl border mb-3 border-surface-200 dark:border-surface-700 p-4 bg-surface-0 dark:bg-surface-900"
+    >
+      <div class="rounded-lg overflow-hidden" style="height: 10rem; margin-bottom: 1rem">
+        <Skeleton width="100%" height="100%" />
+      </div>
+
+      <!-- Title -->
+      <div style="margin-bottom: 1rem">
+        <Skeleton width="90%" height="1rem" />
+        <Skeleton width="70%" height="1rem" style="margin-top: 0.5rem" />
+      </div>
+
+      <div class="flex items-center">
+        <Skeleton shape="circle" size="2rem" class="mr-3" />
+        <div>
+          <Skeleton width="8rem" height="0.75rem" style="margin-bottom: 0.25rem" />
+          <Skeleton width="5rem" height="0.75rem" />
+        </div>
       </div>
     </div>
-    <Skeleton width="100%" height="150px"></Skeleton>
-    <div class="flex justify-between mt-4">
-      <Skeleton width="4rem" height="2rem"></Skeleton>
-      <Skeleton width="4rem" height="2rem"></Skeleton>
+
+    <div
+      class="rounded-xl border mb-3 border-surface-200 dark:border-surface-700 p-4 bg-surface-0 dark:bg-surface-900"
+    >
+      <div class="rounded-lg overflow-hidden" style="height: 10rem; margin-bottom: 1rem">
+        <Skeleton width="100%" height="100%" />
+      </div>
+      <div style="margin-bottom: 1rem">
+        <Skeleton width="90%" height="1rem" />
+        <Skeleton width="70%" height="1rem" style="margin-top: 0.5rem" />
+      </div>
+      <div class="flex items-center">
+        <Skeleton shape="circle" size="2rem" class="mr-3" />
+        <div>
+          <Skeleton width="8rem" height="0.75rem" style="margin-bottom: 0.25rem" />
+          <Skeleton width="5rem" height="0.75rem" />
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="rounded-xl border mb-3 border-surface-200 dark:border-surface-700 p-4 bg-surface-0 dark:bg-surface-900"
+    >
+      <div class="rounded-lg overflow-hidden" style="height: 10rem; margin-bottom: 1rem">
+        <Skeleton width="100%" height="100%" />
+      </div>
+      <div style="margin-bottom: 1rem">
+        <Skeleton width="90%" height="1rem" />
+        <Skeleton width="70%" height="1rem" style="margin-top: 0.5rem" />
+      </div>
+      <div class="flex items-center">
+        <Skeleton shape="circle" size="2rem" class="mr-3" />
+        <div>
+          <Skeleton width="8rem" height="0.75rem" style="margin-bottom: 0.25rem" />
+          <Skeleton width="5rem" height="0.75rem" />
+        </div>
+      </div>
     </div>
   </div>
+
   <!-- cards grid -->
   <div v-else class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
     <CardComponent v-for="card in filteredCards" :key="card.id" :card="card" />
